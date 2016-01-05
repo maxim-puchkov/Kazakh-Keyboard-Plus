@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		84CDFBE61C3C1F4200E2EF3E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CDFBE51C3C1F4200E2EF3E /* main.m */; };
+		84CDFBE91C3C1F4200E2EF3E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CDFBE81C3C1F4200E2EF3E /* AppDelegate.m */; };
+		84CDFBEC1C3C1F4200E2EF3E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CDFBEB1C3C1F4200E2EF3E /* ViewController.m */; };
+		84CDFBEF1C3C1F4200E2EF3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CDFBED1C3C1F4200E2EF3E /* Main.storyboard */; };
+		84CDFBF11C3C1F4200E2EF3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84CDFBF01C3C1F4200E2EF3E /* Assets.xcassets */; };
+		84CDFBF41C3C1F4200E2EF3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CDFBF21C3C1F4200E2EF3E /* LaunchScreen.storyboard */; };
+		84CDFBFF1C3C1F4200E2EF3E /* Kazakh_KeyboardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CDFBFE1C3C1F4200E2EF3E /* Kazakh_KeyboardTests.m */; };
+		84CDFC0A1C3C1F4200E2EF3E /* Kazakh_KeyboardUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CDFC091C3C1F4200E2EF3E /* Kazakh_KeyboardUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84CDFBFB1C3C1F4200E2EF3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84CDFBD91C3C1F4200E2EF3E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84CDFBE01C3C1F4200E2EF3E;
+			remoteInfo = "Kazakh Keyboard";
+		};
+		84CDFC061C3C1F4200E2EF3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84CDFBD91C3C1F4200E2EF3E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84CDFBE01C3C1F4200E2EF3E;
+			remoteInfo = "Kazakh Keyboard";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		84CDFBE11C3C1F4200E2EF3E /* Kazakh Keyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kazakh Keyboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84CDFBE51C3C1F4200E2EF3E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		84CDFBE71C3C1F4200E2EF3E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		84CDFBE81C3C1F4200E2EF3E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		84CDFBEA1C3C1F4200E2EF3E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		84CDFBEB1C3C1F4200E2EF3E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		84CDFBEE1C3C1F4200E2EF3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84CDFBF01C3C1F4200E2EF3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84CDFBF31C3C1F4200E2EF3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84CDFBF51C3C1F4200E2EF3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84CDFBFA1C3C1F4200E2EF3E /* Kazakh KeyboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kazakh KeyboardTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84CDFBFE1C3C1F4200E2EF3E /* Kazakh_KeyboardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Kazakh_KeyboardTests.m; sourceTree = "<group>"; };
+		84CDFC001C3C1F4200E2EF3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84CDFC051C3C1F4200E2EF3E /* Kazakh KeyboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Kazakh KeyboardUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		84CDFC091C3C1F4200E2EF3E /* Kazakh_KeyboardUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Kazakh_KeyboardUITests.m; sourceTree = "<group>"; };
+		84CDFC0B1C3C1F4200E2EF3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84CDFBDE1C3C1F4200E2EF3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84CDFBF71C3C1F4200E2EF3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84CDFC021C3C1F4200E2EF3E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84CDFBD81C3C1F4200E2EF3E = {
+			isa = PBXGroup;
+			children = (
+				84CDFBE31C3C1F4200E2EF3E /* Kazakh Keyboard */,
+				84CDFBFD1C3C1F4200E2EF3E /* Kazakh KeyboardTests */,
+				84CDFC081C3C1F4200E2EF3E /* Kazakh KeyboardUITests */,
+				84CDFBE21C3C1F4200E2EF3E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		84CDFBE21C3C1F4200E2EF3E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84CDFBE11C3C1F4200E2EF3E /* Kazakh Keyboard.app */,
+				84CDFBFA1C3C1F4200E2EF3E /* Kazakh KeyboardTests.xctest */,
+				84CDFC051C3C1F4200E2EF3E /* Kazakh KeyboardUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84CDFBE31C3C1F4200E2EF3E /* Kazakh Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				84CDFBE71C3C1F4200E2EF3E /* AppDelegate.h */,
+				84CDFBE81C3C1F4200E2EF3E /* AppDelegate.m */,
+				84CDFBEA1C3C1F4200E2EF3E /* ViewController.h */,
+				84CDFBEB1C3C1F4200E2EF3E /* ViewController.m */,
+				84CDFBED1C3C1F4200E2EF3E /* Main.storyboard */,
+				84CDFBF01C3C1F4200E2EF3E /* Assets.xcassets */,
+				84CDFBF21C3C1F4200E2EF3E /* LaunchScreen.storyboard */,
+				84CDFBF51C3C1F4200E2EF3E /* Info.plist */,
+				84CDFBE41C3C1F4200E2EF3E /* Supporting Files */,
+			);
+			path = "Kazakh Keyboard";
+			sourceTree = "<group>";
+		};
+		84CDFBE41C3C1F4200E2EF3E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				84CDFBE51C3C1F4200E2EF3E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84CDFBFD1C3C1F4200E2EF3E /* Kazakh KeyboardTests */ = {
+			isa = PBXGroup;
+			children = (
+				84CDFBFE1C3C1F4200E2EF3E /* Kazakh_KeyboardTests.m */,
+				84CDFC001C3C1F4200E2EF3E /* Info.plist */,
+			);
+			path = "Kazakh KeyboardTests";
+			sourceTree = "<group>";
+		};
+		84CDFC081C3C1F4200E2EF3E /* Kazakh KeyboardUITests */ = {
+			isa = PBXGroup;
+			children = (
+				84CDFC091C3C1F4200E2EF3E /* Kazakh_KeyboardUITests.m */,
+				84CDFC0B1C3C1F4200E2EF3E /* Info.plist */,
+			);
+			path = "Kazakh KeyboardUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84CDFBE01C3C1F4200E2EF3E /* Kazakh Keyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84CDFC0E1C3C1F4200E2EF3E /* Build configuration list for PBXNativeTarget "Kazakh Keyboard" */;
+			buildPhases = (
+				84CDFBDD1C3C1F4200E2EF3E /* Sources */,
+				84CDFBDE1C3C1F4200E2EF3E /* Frameworks */,
+				84CDFBDF1C3C1F4200E2EF3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Kazakh Keyboard";
+			productName = "Kazakh Keyboard";
+			productReference = 84CDFBE11C3C1F4200E2EF3E /* Kazakh Keyboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		84CDFBF91C3C1F4200E2EF3E /* Kazakh KeyboardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84CDFC111C3C1F4200E2EF3E /* Build configuration list for PBXNativeTarget "Kazakh KeyboardTests" */;
+			buildPhases = (
+				84CDFBF61C3C1F4200E2EF3E /* Sources */,
+				84CDFBF71C3C1F4200E2EF3E /* Frameworks */,
+				84CDFBF81C3C1F4200E2EF3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84CDFBFC1C3C1F4200E2EF3E /* PBXTargetDependency */,
+			);
+			name = "Kazakh KeyboardTests";
+			productName = "Kazakh KeyboardTests";
+			productReference = 84CDFBFA1C3C1F4200E2EF3E /* Kazakh KeyboardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		84CDFC041C3C1F4200E2EF3E /* Kazakh KeyboardUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84CDFC141C3C1F4200E2EF3E /* Build configuration list for PBXNativeTarget "Kazakh KeyboardUITests" */;
+			buildPhases = (
+				84CDFC011C3C1F4200E2EF3E /* Sources */,
+				84CDFC021C3C1F4200E2EF3E /* Frameworks */,
+				84CDFC031C3C1F4200E2EF3E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84CDFC071C3C1F4200E2EF3E /* PBXTargetDependency */,
+			);
+			name = "Kazakh KeyboardUITests";
+			productName = "Kazakh KeyboardUITests";
+			productReference = 84CDFC051C3C1F4200E2EF3E /* Kazakh KeyboardUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84CDFBD91C3C1F4200E2EF3E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Maxim Puchkov";
+				TargetAttributes = {
+					84CDFBE01C3C1F4200E2EF3E = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					84CDFBF91C3C1F4200E2EF3E = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 84CDFBE01C3C1F4200E2EF3E;
+					};
+					84CDFC041C3C1F4200E2EF3E = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 84CDFBE01C3C1F4200E2EF3E;
+					};
+				};
+			};
+			buildConfigurationList = 84CDFBDC1C3C1F4200E2EF3E /* Build configuration list for PBXProject "Kazakh Keyboard" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84CDFBD81C3C1F4200E2EF3E;
+			productRefGroup = 84CDFBE21C3C1F4200E2EF3E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84CDFBE01C3C1F4200E2EF3E /* Kazakh Keyboard */,
+				84CDFBF91C3C1F4200E2EF3E /* Kazakh KeyboardTests */,
+				84CDFC041C3C1F4200E2EF3E /* Kazakh KeyboardUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84CDFBDF1C3C1F4200E2EF3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84CDFBF41C3C1F4200E2EF3E /* LaunchScreen.storyboard in Resources */,
+				84CDFBF11C3C1F4200E2EF3E /* Assets.xcassets in Resources */,
+				84CDFBEF1C3C1F4200E2EF3E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84CDFBF81C3C1F4200E2EF3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84CDFC031C3C1F4200E2EF3E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84CDFBDD1C3C1F4200E2EF3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84CDFBEC1C3C1F4200E2EF3E /* ViewController.m in Sources */,
+				84CDFBE91C3C1F4200E2EF3E /* AppDelegate.m in Sources */,
+				84CDFBE61C3C1F4200E2EF3E /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84CDFBF61C3C1F4200E2EF3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84CDFBFF1C3C1F4200E2EF3E /* Kazakh_KeyboardTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84CDFC011C3C1F4200E2EF3E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84CDFC0A1C3C1F4200E2EF3E /* Kazakh_KeyboardUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84CDFBFC1C3C1F4200E2EF3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84CDFBE01C3C1F4200E2EF3E /* Kazakh Keyboard */;
+			targetProxy = 84CDFBFB1C3C1F4200E2EF3E /* PBXContainerItemProxy */;
+		};
+		84CDFC071C3C1F4200E2EF3E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84CDFBE01C3C1F4200E2EF3E /* Kazakh Keyboard */;
+			targetProxy = 84CDFC061C3C1F4200E2EF3E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		84CDFBED1C3C1F4200E2EF3E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84CDFBEE1C3C1F4200E2EF3E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		84CDFBF21C3C1F4200E2EF3E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84CDFBF31C3C1F4200E2EF3E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84CDFC0C1C3C1F4200E2EF3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		84CDFC0D1C3C1F4200E2EF3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84CDFC0F1C3C1F4200E2EF3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Kazakh Keyboard/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.maximpuchkov.Kazakh-Keyboard";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		84CDFC101C3C1F4200E2EF3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Kazakh Keyboard/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.maximpuchkov.Kazakh-Keyboard";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		84CDFC121C3C1F4200E2EF3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Kazakh KeyboardTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.maximpuchkov.Kazakh-KeyboardTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kazakh Keyboard.app/Kazakh Keyboard";
+			};
+			name = Debug;
+		};
+		84CDFC131C3C1F4200E2EF3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Kazakh KeyboardTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.maximpuchkov.Kazakh-KeyboardTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Kazakh Keyboard.app/Kazakh Keyboard";
+			};
+			name = Release;
+		};
+		84CDFC151C3C1F4200E2EF3E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Kazakh KeyboardUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.maximpuchkov.Kazakh-KeyboardUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Kazakh Keyboard";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		84CDFC161C3C1F4200E2EF3E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Kazakh KeyboardUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.maximpuchkov.Kazakh-KeyboardUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Kazakh Keyboard";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84CDFBDC1C3C1F4200E2EF3E /* Build configuration list for PBXProject "Kazakh Keyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84CDFC0C1C3C1F4200E2EF3E /* Debug */,
+				84CDFC0D1C3C1F4200E2EF3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84CDFC0E1C3C1F4200E2EF3E /* Build configuration list for PBXNativeTarget "Kazakh Keyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84CDFC0F1C3C1F4200E2EF3E /* Debug */,
+				84CDFC101C3C1F4200E2EF3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		84CDFC111C3C1F4200E2EF3E /* Build configuration list for PBXNativeTarget "Kazakh KeyboardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84CDFC121C3C1F4200E2EF3E /* Debug */,
+				84CDFC131C3C1F4200E2EF3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		84CDFC141C3C1F4200E2EF3E /* Build configuration list for PBXNativeTarget "Kazakh KeyboardUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84CDFC151C3C1F4200E2EF3E /* Debug */,
+				84CDFC161C3C1F4200E2EF3E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84CDFBD91C3C1F4200E2EF3E /* Project object */;
+}
