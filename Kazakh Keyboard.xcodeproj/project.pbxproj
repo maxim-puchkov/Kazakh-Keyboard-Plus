@@ -69,6 +69,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8427E6E423284927001DC746 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8430278D204DD1EC000ACDE2 /* root.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = root.plist; sourceTree = "<group>"; };
 		84302792204E4BE8000ACDE2 /* SettingsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
 		84302793204E4BE8000ACDE2 /* SettingsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
@@ -189,6 +190,7 @@
 		84CDFBD81C3C1F4200E2EF3E = {
 			isa = PBXGroup;
 			children = (
+				8427E6E423284927001DC746 /* README.md */,
 				84CDFBE31C3C1F4200E2EF3E /* Kazakh Keyboard */,
 				84CDFBFD1C3C1F4200E2EF3E /* Kazakh KeyboardTests */,
 				84CDFC081C3C1F4200E2EF3E /* Kazakh KeyboardUITests */,
