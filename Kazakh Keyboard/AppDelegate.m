@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ACTReporter.h"
 
 @interface AppDelegate ()
 
@@ -15,8 +16,24 @@
 @implementation AppDelegate
 
 
+- (void)application:(UIApplication *)application
+    performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem
+    completionHandler:(void (^)(BOOL))completionHandler {
+    // code
+    
+}
+
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // Казахская Клавиатура+ - download
+    // Google iOS first open tracking snippet
+    // Add this code to your application delegate's
+    // application:didFinishLaunchingWithOptions: method.
+    
+    // [ACTConversionReporter reportWithConversionID:@"924513271" label:@"hTHdCMbCpWYQ9-fruAM" value:@"0.30" isRepeatable:NO];
+    
     return YES;
 }
 

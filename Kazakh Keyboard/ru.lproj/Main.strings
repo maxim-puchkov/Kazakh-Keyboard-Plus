@@ -1,0 +1,156 @@
+
+/* Class = "UILabel"; text = "Веб-сайт"; ObjectID = "0Go-3k-CPt"; */
+"0Go-3k-CPt.text" = "Веб-сайт";
+
+/* Class = "UILabel"; text = "Политика Конфиденциальности"; ObjectID = "0jD-7G-crL"; */
+"0jD-7G-crL.text" = "Политика Конфиденциальности";
+
+/* Class = "UINavigationItem"; title = "Установка"; ObjectID = "1Xu-B5-SGM"; */
+"1Xu-B5-SGM.title" = "Установка";
+
+/* Class = "UILabel"; text = "Установка"; ObjectID = "2wv-XL-Hnl"; */
+"2wv-XL-Hnl.text" = "Установка";
+
+/* Class = "UIBarButtonItem"; title = "Меню"; ObjectID = "3ZY-rb-Tzg"; */
+"3ZY-rb-Tzg.title" = "Меню";
+
+/* Class = "UIBarButtonItem"; title = "Назад"; ObjectID = "3tx-U5-lwe"; */
+"3tx-U5-lwe.title" = "Назад";
+
+/* Class = "UILabel"; text = "Оценить"; ObjectID = "5Us-nL-mFJ"; */
+"5Us-nL-mFJ.text" = "Оценить";
+
+/* Class = "UILabel"; text = "Facebook"; ObjectID = "6ME-xK-FaE"; */
+"6ME-xK-FaE.text" = "Facebook";
+
+/* Class = "UILabel"; text = "Чтобы увидеть все установленные клавиатуры, нажмите Клавиатуры"; ObjectID = "7D1-cd-AFT"; */
+"7D1-cd-AFT.text" = "Чтобы увидеть все установленные клавиатуры, нажмите Клавиатуры";
+
+/* Class = "UINavigationItem"; title = "Установка"; ObjectID = "7RY-9U-IRh"; */
+"7RY-9U-IRh.title" = "Установка";
+
+/* Class = "UILabel"; text = "Выберите пункт Клавиатура"; ObjectID = "BvU-IQ-pvF"; */
+"BvU-IQ-pvF.text" = "Выберите пункт Клавиатура";
+
+/* Class = "UIButton"; normalTitle = "Продолжить"; ObjectID = "CDd-r9-ogJ"; */
+"CDd-r9-ogJ.normalTitle" = "Продолжить";
+
+/* Class = "UILabel"; text = "Twitter"; ObjectID = "Dep-1a-Y4a"; */
+"Dep-1a-Y4a.text" = "Twitter";
+
+/* Class = "UIButton"; normalTitle = "Продолжить"; ObjectID = "END-it-pSO"; */
+"END-it-pSO.normalTitle" = "Продолжить";
+
+/* Class = "UIBarButtonItem"; title = "Меню"; ObjectID = "FMe-y7-BKe"; */
+"FMe-y7-BKe.title" = "Меню";
+
+/* Class = "UIBarButtonItem"; title = "Меню"; ObjectID = "FsJ-pl-62N"; */
+"FsJ-pl-62N.title" = "Меню";
+
+/* Class = "UIButton"; normalTitle = "Завершить"; ObjectID = "Gdx-DX-Y9Q"; */
+"Gdx-DX-Y9Q.normalTitle" = "Завершить";
+
+/* Class = "UILabel"; text = "Facebook"; ObjectID = "Gy9-zS-epS"; */
+"Gy9-zS-epS.text" = "Facebook";
+
+/* Class = "UILabel"; text = "ВКонтакте"; ObjectID = "HcX-FN-HB4"; */
+"HcX-FN-HB4.text" = "ВКонтакте";
+
+/* Class = "UILabel"; text = "Дополнительно"; ObjectID = "IUF-Tp-edD"; */
+"IUF-Tp-edD.text" = "Дополнительно";
+
+/* Class = "UILabel"; text = "Instagram"; ObjectID = "K4F-A5-9er"; */
+"K4F-A5-9er.text" = "Instagram";
+
+/* Class = "UIButton"; normalTitle = "Продолжить"; ObjectID = "LRU-2j-Szd"; */
+"LRU-2j-Szd.normalTitle" = "Продолжить";
+
+/* Class = "UINavigationItem"; title = "Дополнительно"; ObjectID = "Lqz-FK-4Gl"; */
+"Lqz-FK-4Gl.title" = "Дополнительно";
+
+/* Class = "UIBarButtonItem"; title = "Назад"; ObjectID = "NzB-U0-I3g"; */
+"NzB-U0-I3g.title" = "Назад";
+
+/* Class = "UILabel"; text = "Оценить"; ObjectID = "Pyd-QZ-awZ"; */
+"Pyd-QZ-awZ.text" = "Оценить";
+
+/* Class = "UINavigationItem"; title = "Установка"; ObjectID = "R7c-BG-d1z"; */
+"R7c-BG-d1z.title" = "Установка";
+
+/* Class = "UINavigationItem"; title = "Описание"; ObjectID = "SrN-55-gWK"; */
+"SrN-55-gWK.title" = "Описание";
+
+/* Class = "UILabel"; text = "Описание"; ObjectID = "TmY-TC-XKd"; */
+"TmY-TC-XKd.text" = "Описание";
+
+/* Class = "UIBarButtonItem"; title = "Меню"; ObjectID = "ULe-yA-I17"; */
+"ULe-yA-I17.title" = "Меню";
+
+/* Class = "UILabel"; text = "Назад"; ObjectID = "VNl-ng-bud"; */
+"VNl-ng-bud.text" = "Назад";
+
+/* Class = "UIBarButtonItem"; title = "Назад"; ObjectID = "VfO-yj-93Z"; */
+"VfO-yj-93Z.title" = "Назад";
+
+/* Class = "UIBarButtonItem"; title = "Назад"; ObjectID = "WbF-Q7-oib"; */
+"WbF-Q7-oib.title" = "Назад";
+
+/* Class = "UILabel"; text = "Нажмите Новые клавиатуры для установки Казахской Клавиатуры"; ObjectID = "Wkd-g4-dWa"; */
+"Wkd-g4-dWa.text" = "Нажмите Новые клавиатуры для установки Казахской Клавиатуры";
+
+/* Class = "UIBarButtonItem"; title = "Назад"; ObjectID = "Zrf-YI-JdQ"; */
+"Zrf-YI-JdQ.title" = "Назад";
+
+/* Class = "UILabel"; text = "Instagram"; ObjectID = "bDO-HB-KWv"; */
+"bDO-HB-KWv.text" = "Instagram";
+
+/* Class = "UINavigationItem"; title = "Установка"; ObjectID = "bFf-bD-kIn"; */
+"bFf-bD-kIn.title" = "Установка";
+
+/* Class = "UINavigationItem"; title = "Установка"; ObjectID = "c6n-0n-t3S"; */
+"c6n-0n-t3S.title" = "Установка";
+
+/* Class = "UITableViewSection"; headerTitle = "Ссылки будут открыты в Safari"; ObjectID = "djv-69-1fT"; */
+"djv-69-1fT.headerTitle" = "Ссылки будут открыты в Safari";
+
+/* Class = "UILabel"; text = "Готово! Казахская клавиатура готова к использованию"; ObjectID = "dq7-ug-RO9"; */
+"dq7-ug-RO9.text" = "Готово! Казахская клавиатура готова к использованию";
+
+/* Class = "UILabel"; text = "Зайдя в настройки, выберите пункт Основные"; ObjectID = "eKY-0e-MZA"; */
+"eKY-0e-MZA.text" = "Зайдя в настройки, выберите пункт Основные";
+
+/* Class = "UIButton"; normalTitle = "Продолжить"; ObjectID = "fVK-b1-9OG"; */
+"fVK-b1-9OG.normalTitle" = "Продолжить";
+
+/* Class = "UINavigationItem"; title = "Поделиться"; ObjectID = "gmI-Mk-rLS"; */
+"gmI-Mk-rLS.title" = "Поделиться";
+
+/* Class = "UINavigationItem"; title = "Оценить"; ObjectID = "jad-OU-JuA"; */
+"jad-OU-JuA.title" = "Оценить";
+
+/* Class = "UILabel"; text = "Казахская клавиатура поможет вам печатать на родном языке в любом приложении вашего iPhone. Пишите СМС, ВКонтакте,  WhatsApp, Viber и другие сообщения с вашего телефона на казахском языке. Дизайн клавиатуры схож с системной клавиатурой, что позволяет использовать ее не замечая никаких отличий. А поддержка таких функций, как автопрописные, Caps Lock и быстрая клавиша «.» позволят вам печатать с невероятной скоростью и удобством!"; ObjectID = "kOx-CN-KNE"; */
+"kOx-CN-KNE.text" = "Казахская клавиатура поможет вам печатать на родном языке в любом приложении вашего iPhone. Пишите СМС, ВКонтакте,  WhatsApp, Viber и другие сообщения с вашего телефона на казахском языке. Дизайн клавиатуры схож с системной клавиатурой, что позволяет использовать ее не замечая никаких отличий. А поддержка таких функций, как автопрописные, Caps Lock и быстрая клавиша «.» позволят вам печатать с невероятной скоростью и удобством!";
+
+/* Class = "UILabel"; text = "Выберите Казахская клавиатура в списке клавиатур"; ObjectID = "lgK-UT-q9q"; */
+"lgK-UT-q9q.text" = "Выберите Казахская клавиатура в списке клавиатур";
+
+/* Class = "UILabel"; text = "Поделиться"; ObjectID = "lhT-pC-8Ih"; */
+"lhT-pC-8Ih.text" = "Поделиться";
+
+/* Class = "UIButton"; normalTitle = "Продолжить"; ObjectID = "nNl-IL-SxF"; */
+"nNl-IL-SxF.normalTitle" = "Продолжить";
+
+/* Class = "UINavigationItem"; title = "Установка"; ObjectID = "p7F-1G-aSX"; */
+"p7F-1G-aSX.title" = "Установка";
+
+/* Class = "UIBarButtonItem"; title = "Назад"; ObjectID = "pgt-P4-vqr"; */
+"pgt-P4-vqr.title" = "Назад";
+
+/* Class = "UILabel"; text = "Оценить"; ObjectID = "uMJ-G7-zUB"; */
+"uMJ-G7-zUB.text" = "Оценить";
+
+/* Class = "UINavigationItem"; title = "Казахская Клавиатура+"; ObjectID = "x1V-Jj-a9n"; */
+"x1V-Jj-a9n.title" = "Казахская Клавиатура+";
+
+/* Class = "UILabel"; text = "ВКонтакте"; ObjectID = "yJt-IE-4gF"; */
+"yJt-IE-4gF.text" = "ВКонтакте";
