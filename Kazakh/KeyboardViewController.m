@@ -163,16 +163,15 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    CGFloat _expandedHeight = KEYBOARD_HEIGHT;
-    NSLayoutConstraint *_heightConstraint =
-    [NSLayoutConstraint constraintWithItem: self.view
-                                 attribute: NSLayoutAttributeHeight
-                                 relatedBy: NSLayoutRelationEqual
-                                    toItem: nil
-                                 attribute: NSLayoutAttributeNotAnAttribute
-                                multiplier: 0.0
-                                  constant: _expandedHeight];
-    [self.view addConstraint: _heightConstraint];
+    NSLayoutConstraint *heightConstraint = [NSLayoutConstraint
+                                             constraintWithItem:self.view
+                                             attribute:NSLayoutAttributeHeight
+                                             relatedBy:NSLayoutRelationEqual
+                                             toItem:nil
+                                             attribute:NSLayoutAttributeNotAnAttribute
+                                             multiplier:0.0
+                                             constant:KEYBOARD_HEIGHT];
+    [self.view addConstraint: heightConstraint];
     
     NSString *before = [self.textDocumentProxy documentContextBeforeInput];
     before = [before substringWithRange:NSMakeRange(([before length] - 1), 1)];
@@ -210,9 +209,9 @@
     // The app has just changed the document's contents, the document context has been updated.
     
     NSString *before = [self.textDocumentProxy documentContextBeforeInput];
-    before = [before substringWithRange:NSMakeRange(([before length] - 1), 1)];
+    NSString *prev = [before substringWithRange:NSMakeRange(([before length] - 1), 1)];
     
-    if (before == nil) {
+    if (prev == nil) {
         self.keyboard.capital = YES;
         [self adjustCapslock];
     }

@@ -23,7 +23,8 @@
 // App support
 #define SUPPORT_FACEBOOK @"https://www.facebook.com/profile.php?id=100006394095303"
 #define SUPPORT_INSTAGRAM @"https://www.instagram.com/kazakh_keyboard"
-#define SUPPORT_EMAIL @"mailto:maximpuchkov1@gmail.com?subject=Казахская Клавиатура+: Сообщение об ошибке"
+#define SUPPORT_EMAIL @"mailto:maximpuchkov1@gmail.com?subject=Казахская Клавиатура+"
+#define REVIEW_EMAIL @"mailto:maximpuchkov1@gmail.com?subject=Казахская Клавиатура+: Сообщение об ошибке"
 
 
 // Keyboard Settings
