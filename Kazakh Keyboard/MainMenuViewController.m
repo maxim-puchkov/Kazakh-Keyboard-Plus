@@ -25,6 +25,9 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+#pragma mark - Sharing
+
 - (IBAction)sharePressed:(id)sender {
     UIAlertController *alert =  [UIAlertController
                                  alertControllerWithTitle:@"Скопировать ссылку на приложение?"
@@ -53,12 +56,12 @@
 }
 
 - (IBAction)gotoReviews:(id)sender {
-    NSURL *url = [NSURL URLWithString: APP_STORE_REVIEWS_URL];
+    NSURL *url = [NSURL URLWithString:APP_STORE_REVIEWS_URL];
     [[UIApplication sharedApplication] openURL:url];
 }
 
 - (void)resetDefeaults {
-    self.defaults = [[NSUserDefaults alloc] initWithSuiteName: APP_SUITE];
+    self.defaults = [[NSUserDefaults alloc] initWithSuiteName:APP_SUITE];
     if ([self.defaults objectForKey:@"Sound"] == nil) {
         [self.defaults setBool:YES forKey:@"Sound"];
         [self.defaults setBool:NO  forKey:@"Latin"];

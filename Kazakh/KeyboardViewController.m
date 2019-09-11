@@ -229,7 +229,6 @@
 
 #pragma mark - Keyboard Buttons
 
-
 /**
  Add keyboard gesture recognizers.
  */
@@ -296,7 +295,7 @@
                 } else {
                     title = self.keys[0][r][i][1];
                 }
-                UIButton *key = self.keyboard.keyButtons[i+r*11];
+                UIButton *key = self.keyboard.keyButtons[i + r * 11];
                 [key setTitle:title forState:UIControlStateNormal];
             }
         }
@@ -320,7 +319,6 @@
  Turn on capital letter.
     
  @param sender Unknown parameter.
- 
  @param event Unknown parameter.
  */
 - (void)turnOnCapital:(id)sender event:(UIEvent *)event {
@@ -340,7 +338,6 @@
  Turn on capslock when capslock button was pressed twice.
  
  @param sender Unknown parameter.
- 
  @param event Unknown parameter.
  */
 - (void)capslockTouchDownRepeat:(id)sender event:(UIEvent *)event {
@@ -780,7 +777,7 @@
  */
 
 - (void)click {
-    AudioServicesPlaySystemSound(SYSTEM_ID_SOUND_CLICK_ALT);
+    AudioServicesPlaySystemSound(ID_ALT_SOUND_CLICK);
 }
 
 /**
@@ -792,13 +789,13 @@
     NSString *path;
     switch (type) {
         case 0:
-            path = SOUND_CLICK;
+            path = PATH_SOUND_CLICK;
             break;
         case 1:
-            path = SOUND_DELETE;
+            path = PATH_SOUND_DELETE;
             break;
         case 2:
-            path = SOUND_MODIFY;
+            path = PATH_SOUND_MODIFY;
             break;
     }
     
@@ -827,15 +824,15 @@
 }
 
 - (void)playClickSound {
-    [self playSound: SYSTEM_ID_SOUND_CLICK];
+    [self playSound:ID_SOUND_CLICK];
 }
 
 - (void)playDeleteSound {
-    [self playSound: SYSTEM_ID_SOUND_DELETE];
+    [self playSound:ID_SOUND_DELETE];
 }
 
 - (void)playModifierSound {
-    [self playSound: SYSTEM_ID_SOUND_MODIFY];
+    [self playSound:ID_SOUND_MODIFY];
 }
 
 
@@ -851,7 +848,7 @@
     animation.type = kCATransitionFade;
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     [self.keyboard.spaceButton.layer addAnimation:animation forKey:@"changeTextTransition"];
-    [self.keyboard.spaceButton setTitle: SPACE_TITLE forState: UIControlStateNormal];
+    [self.keyboard.spaceButton setTitle:SPACE_TITLE forState: UIControlStateNormal];
 }
 
 
@@ -859,7 +856,7 @@
 #pragma mark - Settings
 
 - (void)readSettings {
-    self.defaults = [[NSUserDefaults alloc] initWithSuiteName: APP_SUITE];
+    self.defaults = [[NSUserDefaults alloc] initWithSuiteName:APP_SUITE];
     [self.defaults synchronize];
     self.soundEnabled = [self.defaults boolForKey:@"Sound"];
     self.tranlsateToLatin = [self.defaults boolForKey:@"Latin"];

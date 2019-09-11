@@ -23,6 +23,8 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -39,23 +41,22 @@
         switch (indexPath.row) {
             case 0:
                 // App webiste
-                url = [NSURL URLWithString: APP_URL];
+                url = [NSURL URLWithString:APP_URL];
                 break;
             case 1:
                 // Facebook
-                url = [NSURL URLWithString: SUPPORT_FACEBOOK];
+                url = [NSURL URLWithString:SUPPORT_FACEBOOK];
                 break;
             case 2:
                 // Instagram
-                url = [NSURL URLWithString: SUPPORT_INSTAGRAM];
+                url = [NSURL URLWithString:SUPPORT_INSTAGRAM];
                 break;
             case 3:
                 // Support email 
-                // url = [NSURL URLWithString:[@"mailto:support@youenjoy.ru?subject=Казахская Клавиатура: Сообщение об ошибке" stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
-                url = [NSURL URLWithString: [SUPPORT_EMAIL stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding]];
+                url = [NSURL URLWithString:[SUPPORT_EMAIL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
                 break;
         }
-        [[UIApplication sharedApplication] openURL: url];
+        [[UIApplication sharedApplication] openURL:url];
     }
 }
 

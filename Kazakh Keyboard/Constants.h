@@ -44,15 +44,15 @@
 
 
 // Sound system ID
-#define SYSTEM_ID_SOUND_CLICK_ALT 1104
-#define SYSTEM_ID_SOUND_CLICK 1123
-#define SYSTEM_ID_SOUND_DELETE 1155
-#define SYSTEM_ID_SOUND_MODIFY 1156
+#define ID_ALT_SOUND_CLICK 1104
+#define ID_SOUND_CLICK 1123
+#define ID_SOUND_DELETE 1155
+#define ID_SOUND_MODIFY 1156
 
 
 // Paths to sound files
-#define SOUND_CLICK @"file:///System/Library/Audio/UISounds/key_press_click.caf"
-#define SOUND_DELETE @"file:///System/Library/Audio/UISounds/key_press_delete.caf"
-#define SOUND_MODIFY @"file:///System/Library/Audio/UISounds/key_press_modifier.caf"
+#define PATH_SOUND_CLICK @"file:///System/Library/Audio/UISounds/key_press_click.caf"
+#define PATH_SOUND_DELETE @"file:///System/Library/Audio/UISounds/key_press_delete.caf"
+#define PATH_SOUND_MODIFY @"file:///System/Library/Audio/UISounds/key_press_modifier.caf"
 
 #endif /* Constants_h */
