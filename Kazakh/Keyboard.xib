@@ -352,7 +352,7 @@
                 <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Al-AM-UCX" userLabel="Space Button">
                     <rect key="frame" x="96" y="214" width="184" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                    <state key="normal" title="Қазақша" backgroundImage="button_white_big">
+                    <state key="normal" title="Қазақ тілі" backgroundImage="button_white_big">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <state key="highlighted" backgroundImage="button_white_big_pressed"/>
