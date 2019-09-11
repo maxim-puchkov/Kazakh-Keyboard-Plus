@@ -7,18 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Keyboard.h"
 #import <AudioToolbox/AudioToolbox.h>
-
-#define SYSTEM_SOUND_ID_CLICK 1104
-#define DELETE_CHARACTER_INTERVAL 0.155
-#define SPACE_ANIMATION_DELAY 1.210
-#define SPACE_ANIMATION_DURATION 0.877
-
-#define SYSTEM_SOUND_CLICK 1123
-#define SYSTEM_SOUND_DELETE 1155
-#define SYSTEM_SOUND_MODIFIER 1156
-#define SUITE_NAME @"group.com.maximpuchkov.Kazakh-Keyboard"
+#import "Keyboard.h"
+#import "Constants.h"
 
 @interface KeyboardViewController : UIInputViewController
 
@@ -32,7 +23,9 @@
 @property BOOL soundEnabled;
 @property BOOL tranlsateToLatin;
 
-#pragma mark - Versions 1.0+ -
+
+
+#pragma mark - Version 1.0
 
 - (void)updateViewConstraints;
 
@@ -102,7 +95,9 @@
 
 - (void)changeSpaceTitle;
 
-#pragma mark - Version 2.0 -
+
+
+#pragma mark - Version 2.0
 
 - (void)playSound:(SystemSoundID)soundID;
 
@@ -120,7 +115,9 @@
 
 - (void)spaceReleased;
 
-#pragma mark - Version 2.1 -
+
+
+#pragma mark - Version 2.1
 
 - (void)invalidateTimers;
 

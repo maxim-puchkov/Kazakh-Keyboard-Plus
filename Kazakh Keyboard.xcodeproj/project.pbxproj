@@ -70,6 +70,7 @@
 
 /* Begin PBXFileReference section */
 		8427E6E423284927001DC746 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		8427E6E5232882DA001DC746 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		8430278D204DD1EC000ACDE2 /* root.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = root.plist; sourceTree = "<group>"; };
 		84302792204E4BE8000ACDE2 /* SettingsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingsTableViewController.h; sourceTree = "<group>"; };
 		84302793204E4BE8000ACDE2 /* SettingsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingsTableViewController.m; sourceTree = "<group>"; };
@@ -218,6 +219,7 @@
 				8430278C204DD1C0000ACDE2 /* Settings */,
 				8466F1F31CD999DA000056BA /* GoogleConversionTrackingSDK-iOS-3.4.0 */,
 				84CDFBE71C3C1F4200E2EF3E /* AppDelegate.h */,
+				8427E6E5232882DA001DC746 /* Constants.h */,
 				84CDFBE81C3C1F4200E2EF3E /* AppDelegate.m */,
 				849DF71A1C4B167000D86556 /* TableViewController.h */,
 				849DF71B1C4B167000D86556 /* TableViewController.m */,
@@ -762,6 +764,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = U55Q33J358;
 				INFOPLIST_FILE = Kazakh/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -782,6 +785,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = U55Q33J358;
 				INFOPLIST_FILE = Kazakh/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

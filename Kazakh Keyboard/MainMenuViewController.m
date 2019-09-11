@@ -30,14 +30,16 @@
                                  alertControllerWithTitle:@"Скопировать ссылку на приложение?"
                                  message:@"Ссылкой можно поделиться с друзьями!"
                                  preferredStyle:UIAlertControllerStyleActionSheet];
+    
     UIAlertAction *ok = [UIAlertAction
                          actionWithTitle:@"Да"
                          style:UIAlertActionStyleDefault
                          handler:^(UIAlertAction *action) {
                              UIPasteboard *pasteboard = [UIPasteboard generalPasteboard];
-                             pasteboard.string = @"https://itunes.apple.com/app/apple-store/id1084095398?pt=118117596&ct=KKS&mt=8";
+                             pasteboard.string = APP_STORE_URL;
                              [alert dismissViewControllerAnimated:YES completion:nil]; 
                          }];
+    
     UIAlertAction *cancel = [UIAlertAction
                              actionWithTitle:@"Отмена"
                              style:UIAlertActionStyleDefault
@@ -51,12 +53,12 @@
 }
 
 - (IBAction)gotoReviews:(id)sender {
-    NSURL *url = [NSURL URLWithString:@"itms-apps://itunes.apple.com/app/id1084095398?action=write-review&mt=8"];
+    NSURL *url = [NSURL URLWithString: APP_STORE_REVIEWS_URL];
     [[UIApplication sharedApplication] openURL:url];
 }
 
 - (void)resetDefeaults {
-    self.defaults = [[NSUserDefaults alloc] initWithSuiteName:SUITE_NAME];
+    self.defaults = [[NSUserDefaults alloc] initWithSuiteName: APP_SUITE];
     if ([self.defaults objectForKey:@"Sound"] == nil) {
         [self.defaults setBool:YES forKey:@"Sound"];
         [self.defaults setBool:NO  forKey:@"Latin"];

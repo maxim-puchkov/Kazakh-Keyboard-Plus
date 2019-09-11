@@ -15,6 +15,8 @@
 @implementation KeyboardViewController
 
 
+
+#pragma mark - Version 1.0
 #pragma mark - View Controller Methods
 
 - (void)updateViewConstraints {
@@ -161,7 +163,7 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    CGFloat _expandedHeight = 259;
+    CGFloat _expandedHeight = KEYBOARD_HEIGHT;
     NSLayoutConstraint *_heightConstraint =
     [NSLayoutConstraint constraintWithItem: self.view
                                  attribute: NSLayoutAttributeHeight
@@ -222,6 +224,8 @@
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
     // Keyboard is visbile
 }
+
+
 
 #pragma mark - Keyboard Buttons
 
@@ -308,7 +312,9 @@
     }
 }
 
-#pragma mark Capslock
+
+
+#pragma mark Caps Lock
 
 /**
  Turn on capital letter.
@@ -405,6 +411,8 @@
     }
 }
 
+
+
 #pragma mark Symbols
 
 /**
@@ -416,8 +424,8 @@
     [self playModifierSound];
     if (self.keyboard.set == 0) {
         self.keyboard.set = 1;
-        [self.keyboard.setButton setTitle:@"AӘБ" forState:UIControlStateNormal];
-        [self.keyboard.symbolsButton setTitle:@"+=#" forState:UIControlStateNormal];
+        [self.keyboard.setButton setTitle: ALPHA forState:UIControlStateNormal];
+        [self.keyboard.symbolsButton setTitle: SYMBOL forState:UIControlStateNormal];
         self.keyboard.capslockButton.hidden = YES;
         self.keyboard.deleteButton.hidden = YES;
         self.keyboard.adjustedDeleteButton.hidden = NO;
@@ -428,7 +436,7 @@
         [self showSpecialCharacters];
     } else {
         self.keyboard.set = 0;
-        [self.keyboard.setButton setTitle:@"123" forState:UIControlStateNormal];
+        [self.keyboard.setButton setTitle: NUMERIC forState:UIControlStateNormal];
         self.keyboard.capslockButton.hidden = NO;
         self.keyboard.symbolsButton.hidden = YES;
         self.keyboard.adjustedDeleteButton.hidden = YES;
@@ -448,10 +456,10 @@
     [self playModifierSound];
     if (self.keyboard.set == 1) {
         self.keyboard.set = 2;
-        [self.keyboard.symbolsButton setTitle:@"123" forState:UIControlStateNormal];
+        [self.keyboard.symbolsButton setTitle: NUMERIC forState:UIControlStateNormal];
     } else {
         self.keyboard.set = 1;
-        [self.keyboard.symbolsButton setTitle:@"#+=" forState:UIControlStateNormal];
+        [self.keyboard.symbolsButton setTitle: SYMBOL forState:UIControlStateNormal];
     }
     [self setKeyValues];
 }
@@ -486,6 +494,8 @@
     }
 }
 
+
+
 #pragma mark Space
 
 /**
@@ -509,6 +519,8 @@
     }
 }
 
+
+
 #pragma mark Return
 
 /**
@@ -525,6 +537,8 @@
     }
     [self invalidateTimers];
 }
+
+
 
 #pragma mark Delete
 
@@ -579,6 +593,8 @@
     self.deleting = nil;
 }
 
+
+
 #pragma mark Globe
 
 /**
@@ -588,6 +604,8 @@
     //[self playKeyPressSound:2];
     [self playModifierSound];
 }
+
+
 
 #pragma mark - Keyboard Settings
 
@@ -752,15 +770,17 @@
     }
 }
 
+
+
 #pragma mark - Customization
-#pragma mark Sound 1.0 (obsolete)
+#pragma mark Sound 1.0 (deprecated)
 
 /**
  Play click sound.
  */
 
 - (void)click {
-    AudioServicesPlaySystemSound(SYSTEM_SOUND_ID_CLICK);
+    AudioServicesPlaySystemSound(SYSTEM_ID_SOUND_CLICK_ALT);
 }
 
 /**
@@ -769,24 +789,20 @@
  @param type Type of the sound to play.
  */
 - (void)playKeyPressSound:(NSInteger)type {
-    NSURL *url;
     NSString *path;
-    
     switch (type) {
         case 0:
-            path = @"file:///System/Library/Audio/UISounds/key_press_click.caf";
+            path = SOUND_CLICK;
             break;
         case 1:
-            path = @"file:///System/Library/Audio/UISounds/key_press_delete.caf";
+            path = SOUND_DELETE;
             break;
         case 2:
-            path = @"file:///System/Library/Audio/UISounds/key_press_modifier.caf";
+            path = SOUND_MODIFY;
             break;
     }
     
-    
-    url = [NSURL URLWithString:path];
-
+    NSURL *url = [NSURL URLWithString:path];
     NSFileManager *fileManager = [NSFileManager defaultManager];
     if ([fileManager fileExistsAtPath:[url path]]) {
         SystemSoundID soundID;
@@ -795,10 +811,12 @@
     } else {
         [self click];
     }
-    
 }
 
-#pragma mark Sound 2.0
+
+
+#pragma mark - Version 2.0
+#pragma mark - Sound
 
 - (void)playSound:(SystemSoundID)soundID {
     if (self.soundEnabled) {
@@ -809,16 +827,18 @@
 }
 
 - (void)playClickSound {
-    [self playSound:SYSTEM_SOUND_CLICK];
+    [self playSound: SYSTEM_ID_SOUND_CLICK];
 }
 
 - (void)playDeleteSound {
-    [self playSound:SYSTEM_SOUND_DELETE];
+    [self playSound: SYSTEM_ID_SOUND_DELETE];
 }
 
 - (void)playModifierSound {
-    [self playSound:SYSTEM_SOUND_MODIFIER];
+    [self playSound: SYSTEM_ID_SOUND_MODIFY];
 }
+
+
 
 #pragma mark Animation
 
@@ -831,13 +851,15 @@
     animation.type = kCATransitionFade;
     animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     [self.keyboard.spaceButton.layer addAnimation:animation forKey:@"changeTextTransition"];
-    [self.keyboard.spaceButton setTitle:@"Бос орын" forState:UIControlStateNormal];
+    [self.keyboard.spaceButton setTitle: SPACE_TITLE forState: UIControlStateNormal];
 }
+
+
 
 #pragma mark - Settings
 
 - (void)readSettings {
-    self.defaults = [[NSUserDefaults alloc] initWithSuiteName:SUITE_NAME];
+    self.defaults = [[NSUserDefaults alloc] initWithSuiteName: APP_SUITE];
     [self.defaults synchronize];
     self.soundEnabled = [self.defaults boolForKey:@"Sound"];
     self.tranlsateToLatin = [self.defaults boolForKey:@"Latin"];
@@ -928,6 +950,10 @@
     [self.holdSpace invalidate];
     self.holdSpace = nil;
 }
+
+
+
+#pragma mark - Version 2.1
 
 - (void)invalidateTimers {
     if (self.deleting) {

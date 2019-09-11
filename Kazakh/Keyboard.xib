@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14810.11" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.13"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,7 +14,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ScE-oi-ekx" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="38" y="165" width="28.5" height="43"/>
+                    <rect key="frame" x="38" y="165" width="28" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="Я" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -24,7 +22,7 @@
                     <state key="highlighted" backgroundImage="button_white_key_pressed.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AsY-1f-gXi" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="72.5" y="165" width="28" height="43"/>
+                    <rect key="frame" x="72" y="165" width="28" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="Ч" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -32,7 +30,7 @@
                     <state key="highlighted" backgroundImage="button_white_key_pressed.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jUB-zm-cEC" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="106.5" y="165" width="28.5" height="43"/>
+                    <rect key="frame" x="106" y="165" width="28" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="С" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -40,7 +38,7 @@
                     <state key="highlighted" backgroundImage="button_white_key_pressed.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpQ-Sb-cu8" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="141" y="165" width="28" height="43"/>
+                    <rect key="frame" x="140" y="165" width="28" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="М" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -48,7 +46,7 @@
                     <state key="highlighted" backgroundImage="button_white_key_pressed.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPP-xS-Q5s" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="175" y="165" width="28" height="43"/>
+                    <rect key="frame" x="174" y="165" width="28" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="И" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -56,7 +54,7 @@
                     <state key="highlighted" backgroundImage="button_white_key_pressed.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQV-h5-RUp" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="209" y="165" width="27.5" height="43"/>
+                    <rect key="frame" x="208" y="165" width="28" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="Т" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -64,7 +62,7 @@
                     <state key="highlighted" backgroundImage="button_white_key_pressed.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tr-8X-wsC" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="242.5" y="165" width="28" height="43"/>
+                    <rect key="frame" x="242" y="165" width="28" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="Ь" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -72,7 +70,7 @@
                     <state key="highlighted" backgroundImage="button_white_key_pressed.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQ7-dO-P16" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="276.5" y="165" width="27.5" height="43"/>
+                    <rect key="frame" x="276" y="165" width="28" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="Б" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -80,7 +78,7 @@
                     <state key="highlighted" backgroundImage="button_white_key_pressed.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tgq-t5-pYf" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="310" y="165" width="28.5" height="43"/>
+                    <rect key="frame" x="310" y="165" width="28" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="Ю" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -96,7 +94,7 @@
                     <state key="highlighted" backgroundImage="button_white_key_pressed.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4CS-sk-PwQ" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="38" y="112" width="28.5" height="43"/>
+                    <rect key="frame" x="38" y="112" width="28" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="Ы" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -104,7 +102,7 @@
                     <state key="highlighted" backgroundImage="button_white_key_pressed.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sus-2d-B5f" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="72.5" y="112" width="28" height="43"/>
+                    <rect key="frame" x="72" y="112" width="28" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="В" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -112,7 +110,7 @@
                     <state key="highlighted" backgroundImage="button_white_key_pressed.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DpK-4O-jrj" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="106.5" y="112" width="28.5" height="43"/>
+                    <rect key="frame" x="106" y="112" width="28" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="А" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -120,7 +118,7 @@
                     <state key="highlighted" backgroundImage="button_white_key_pressed.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Es1-6w-MQ5" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="141" y="112" width="28" height="43"/>
+                    <rect key="frame" x="140" y="112" width="28" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="П" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -128,7 +126,7 @@
                     <state key="highlighted" backgroundImage="button_white_key_pressed.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mKM-We-dfz" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="175" y="112" width="28" height="43"/>
+                    <rect key="frame" x="174" y="112" width="28" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="Р" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -136,7 +134,7 @@
                     <state key="highlighted" backgroundImage="button_white_key_pressed.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DRT-u9-TPc" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="209" y="112" width="27.5" height="43"/>
+                    <rect key="frame" x="208" y="112" width="28" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="О" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -144,7 +142,7 @@
                     <state key="highlighted" backgroundImage="button_white_key_pressed.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HL6-SL-qyt" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="242.5" y="112" width="28" height="43"/>
+                    <rect key="frame" x="242" y="112" width="28" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="Л" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -152,7 +150,7 @@
                     <state key="highlighted" backgroundImage="button_white_key_pressed.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fO7-4A-MSe" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="276.5" y="112" width="27.5" height="43"/>
+                    <rect key="frame" x="276" y="112" width="28" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="Д" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -160,7 +158,7 @@
                     <state key="highlighted" backgroundImage="button_white_key_pressed.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cxS-bi-XLV" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="310" y="112" width="28.5" height="43"/>
+                    <rect key="frame" x="310" y="112" width="28" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="Ж" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -168,7 +166,7 @@
                     <state key="highlighted" backgroundImage="button_white_key_pressed.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vCE-nb-F5B" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="344.5" y="112" width="27.5" height="43"/>
+                    <rect key="frame" x="344" y="112" width="28" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="Э" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -184,7 +182,7 @@
                     <state key="highlighted" backgroundImage="button_white_key_pressed.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9l-EV-TWH" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="38" y="59" width="28.5" height="43"/>
+                    <rect key="frame" x="38" y="59" width="28" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="Ц" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -192,7 +190,7 @@
                     <state key="highlighted" backgroundImage="button_white_key_pressed.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drG-Oh-QKu" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="72.5" y="59" width="28" height="43"/>
+                    <rect key="frame" x="72" y="59" width="28" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="У" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -200,7 +198,7 @@
                     <state key="highlighted" backgroundImage="button_white_key_pressed.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUe-k6-IHa" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="106.5" y="59" width="28.5" height="43"/>
+                    <rect key="frame" x="106" y="59" width="28" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="К" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -208,7 +206,7 @@
                     <state key="highlighted" backgroundImage="button_white_key_pressed.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPf-0B-jD8" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="141" y="59" width="28" height="43"/>
+                    <rect key="frame" x="140" y="59" width="28" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="Е" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -216,7 +214,7 @@
                     <state key="highlighted" backgroundImage="button_white_key_pressed.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LkL-9k-uXe" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="175" y="59" width="28" height="43"/>
+                    <rect key="frame" x="174" y="59" width="28" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="Н" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -224,7 +222,7 @@
                     <state key="highlighted" backgroundImage="button_white_key_pressed.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EnU-yv-g2d" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="209" y="59" width="27.5" height="43"/>
+                    <rect key="frame" x="208" y="59" width="28" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="Г" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -232,7 +230,7 @@
                     <state key="highlighted" backgroundImage="button_white_key_pressed.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OzQ-eZ-tc5" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="242.5" y="59" width="28" height="43"/>
+                    <rect key="frame" x="242" y="59" width="28" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="Ш" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -240,7 +238,7 @@
                     <state key="highlighted" backgroundImage="button_white_key_pressed.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gAC-Zp-RTG" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="276.5" y="59" width="27.5" height="43"/>
+                    <rect key="frame" x="276" y="59" width="28" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="Щ" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -248,7 +246,7 @@
                     <state key="highlighted" backgroundImage="button_white_key_pressed.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6Y-yI-pol" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="310" y="59" width="28.5" height="43"/>
+                    <rect key="frame" x="310" y="59" width="28" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="З" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -256,7 +254,7 @@
                     <state key="highlighted" backgroundImage="button_white_key_pressed.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMT-O1-olb" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="344.5" y="59" width="27.5" height="43"/>
+                    <rect key="frame" x="344" y="59" width="28" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="Х" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -272,7 +270,7 @@
                     <state key="highlighted" backgroundImage="button_white_key_pressed.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M31-xN-6M5" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="38" y="6" width="28.5" height="43"/>
+                    <rect key="frame" x="38" y="6" width="28" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="I" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -280,7 +278,7 @@
                     <state key="highlighted" backgroundImage="button_white_key_pressed.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZo-kr-6lW" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="72.5" y="6" width="28" height="43"/>
+                    <rect key="frame" x="72" y="6" width="28" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="Ң" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -288,7 +286,7 @@
                     <state key="highlighted" backgroundImage="button_white_key_pressed.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQy-tF-6Uo" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="106.5" y="6" width="28.5" height="43"/>
+                    <rect key="frame" x="106" y="6" width="28" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="Ғ" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -296,7 +294,7 @@
                     <state key="highlighted" backgroundImage="button_white_key_pressed.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMG-w2-qfY" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="141" y="6" width="28" height="43"/>
+                    <rect key="frame" x="140" y="6" width="28" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="Ү" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -304,7 +302,7 @@
                     <state key="highlighted" backgroundImage="button_white_key_pressed.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5o-3U-Nbs" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="175" y="6" width="27" height="43"/>
+                    <rect key="frame" x="174" y="6" width="28" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="Ұ" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -320,7 +318,7 @@
                     <state key="highlighted" backgroundImage="button_white_key_pressed.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4bc-S5-Cgh" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="242" y="6" width="28.5" height="43"/>
+                    <rect key="frame" x="242" y="6" width="28" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="Ө" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -328,7 +326,7 @@
                     <state key="highlighted" backgroundImage="button_white_key_pressed.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yfq-Kq-AAw" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="276.5" y="6" width="28" height="43"/>
+                    <rect key="frame" x="276" y="6" width="28" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="Һ" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -336,7 +334,7 @@
                     <state key="highlighted" backgroundImage="button_white_key_pressed.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzV-xx-Y7x" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="310.5" y="6" width="28" height="43"/>
+                    <rect key="frame" x="310" y="6" width="28" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="Ъ" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -344,7 +342,7 @@
                     <state key="highlighted" backgroundImage="button_white_key_pressed.png"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6E-2Q-kuk" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="344.5" y="6" width="27.5" height="43"/>
+                    <rect key="frame" x="344" y="6" width="28" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="Ё" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -388,13 +386,13 @@
                     <state key="highlighted" backgroundImage="button_white_system_pressed"/>
                 </button>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jf5-be-eY4" userLabel="Symbols Button">
-                    <rect key="frame" x="4" y="165" width="42.5" height="43"/>
+                    <rect key="frame" x="4" y="165" width="42" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <state key="normal" title="Sy" backgroundImage="button_white_system"/>
                     <state key="highlighted" backgroundImage="button_white_system_pressed"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4HI-g6-6Ox" userLabel="Delete Button">
-                    <rect key="frame" x="344.5" y="165" width="27.5" height="43"/>
+                    <rect key="frame" x="344" y="165" width="28" height="43"/>
                     <inset key="contentEdgeInsets" minX="4" minY="8" maxX="4" maxY="8"/>
                     <state key="normal" title="D" image="delete_black" backgroundImage="button_white_system"/>
                     <state key="highlighted" backgroundImage="button_white_system_pressed"/>
@@ -407,91 +405,91 @@
                     <state key="highlighted" backgroundImage="button_white_system_pressed"/>
                 </button>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A3A-nJ-war" userLabel="." customClass="KeyboardMainButtons">
-                    <rect key="frame" x="58.5" y="165" width="47" height="43"/>
+                    <rect key="frame" x="58" y="165" width="47" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="." backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N5E-oa-iil" userLabel="," customClass="KeyboardMainButtons">
-                    <rect key="frame" x="111.5" y="165" width="47.5" height="43"/>
+                    <rect key="frame" x="111" y="165" width="47" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="," backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M11-dj-lHQ" userLabel="?" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="165" y="165" width="46.5" height="43"/>
+                    <rect key="frame" x="164" y="165" width="47" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="?" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBb-5Y-0kr" userLabel="!" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="217.5" y="165" width="47" height="43"/>
+                    <rect key="frame" x="217" y="165" width="47" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="!" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lwi-DF-HVD" userLabel="'" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="270.5" y="165" width="46.5" height="43"/>
+                    <rect key="frame" x="270" y="165" width="47" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="'" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="age-0D-usN" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="6" y="6" width="31.5" height="43"/>
+                    <rect key="frame" x="6" y="6" width="31" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="n" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1PE-qK-0O9" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="43.5" y="6" width="31" height="43"/>
+                    <rect key="frame" x="43" y="6" width="31" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="n" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WFV-ex-xb4" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="80.5" y="6" width="31" height="43"/>
+                    <rect key="frame" x="80" y="6" width="31.5" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="n" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8sv-wH-rs7" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="117.5" y="6" width="31.5" height="43"/>
+                    <rect key="frame" x="117.5" y="6" width="31" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="n" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tvV-fC-AKm" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="155" y="6" width="31" height="43"/>
+                    <rect key="frame" x="154.5" y="6" width="31" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="n" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q5F-Ky-0Ad" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="192" y="6" width="31" height="43"/>
+                    <rect key="frame" x="191.5" y="6" width="31" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="n" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFk-Vx-UFu" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="229" y="6" width="31" height="43"/>
+                    <rect key="frame" x="228.5" y="6" width="31" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="n" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gH6-te-ryx" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="266" y="6" width="31" height="43"/>
+                    <rect key="frame" x="265.5" y="6" width="31.5" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="n" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -512,56 +510,56 @@
                     </state>
                 </button>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N7e-vi-7Qz" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="6" y="59" width="31.5" height="43"/>
+                    <rect key="frame" x="6" y="59" width="31" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="n" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lhE-sg-RRY" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="43.5" y="59" width="31" height="43"/>
+                    <rect key="frame" x="43" y="59" width="31" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="n" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ci-kd-Rkq" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="80.5" y="59" width="31" height="43"/>
+                    <rect key="frame" x="80" y="59" width="31.5" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="n" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vec-Ir-BH8" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="117.5" y="59" width="31.5" height="43"/>
+                    <rect key="frame" x="117.5" y="59" width="31" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="n" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7V-BH-X90" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="155" y="59" width="31" height="43"/>
+                    <rect key="frame" x="154.5" y="59" width="31" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="n" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="How-Sh-BIi" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="192" y="59" width="31" height="43"/>
+                    <rect key="frame" x="191.5" y="59" width="31" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="n" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pok-dA-FFh" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="229" y="59" width="31" height="43"/>
+                    <rect key="frame" x="228.5" y="59" width="31" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="n" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RAs-v4-CmH" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="266" y="59" width="31" height="43"/>
+                    <rect key="frame" x="265.5" y="59" width="31.5" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="n" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -582,56 +580,56 @@
                     </state>
                 </button>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZWg-21-pwL" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="6" y="112" width="31.5" height="43"/>
+                    <rect key="frame" x="6" y="112" width="31" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="n" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HX4-aG-5eD" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="43.5" y="112" width="31" height="43"/>
+                    <rect key="frame" x="43" y="112" width="31" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="n" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uDG-8z-xq9" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="80.5" y="112" width="31" height="43"/>
+                    <rect key="frame" x="80" y="112" width="31.5" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="n" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhb-vq-rFe" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="117.5" y="112" width="31.5" height="43"/>
+                    <rect key="frame" x="117.5" y="112" width="31" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="n" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qPx-63-61v" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="155" y="112" width="31" height="43"/>
+                    <rect key="frame" x="154.5" y="112" width="31" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="n" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ui-zN-dyC" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="192" y="112" width="31" height="43"/>
+                    <rect key="frame" x="191.5" y="112" width="31" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="n" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfd-q1-4Ct" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="229" y="112" width="31" height="43"/>
+                    <rect key="frame" x="228.5" y="112" width="31" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="n" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>
                 <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v8O-4m-psX" customClass="KeyboardMainButtons">
-                    <rect key="frame" x="266" y="112" width="31" height="43"/>
+                    <rect key="frame" x="265.5" y="112" width="31.5" height="43"/>
                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                     <state key="normal" title="n" backgroundImage="button_white_key">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

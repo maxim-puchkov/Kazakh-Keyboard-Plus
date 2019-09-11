@@ -8,9 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <StoreKit/StoreKit.h>
-
-#define SUITE_NAME @"group.com.maximpuchkov.Kazakh-Keyboard"
-
+#import "Constants.h"
 
 @interface MainMenuViewController : UIViewController
 

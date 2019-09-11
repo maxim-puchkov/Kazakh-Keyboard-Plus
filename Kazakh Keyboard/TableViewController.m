@@ -38,23 +38,24 @@
     if (indexPath.section == 0) {
         switch (indexPath.row) {
             case 0:
-                // main webiste
-                url = [NSURL URLWithString:@"http://youenjoy.ru/m/ru/kk/"];
+                // App webiste
+                url = [NSURL URLWithString: APP_URL];
                 break;
             case 1:
                 // Facebook
-                url = [NSURL URLWithString:@"https://www.facebook.com/profile.php?id=100006394095303"];
+                url = [NSURL URLWithString: SUPPORT_FACEBOOK];
                 break;
             case 2:
                 // Instagram
-                url = [NSURL URLWithString:@"https://www.instagram.com/kazakh_keyboard"];
+                url = [NSURL URLWithString: SUPPORT_INSTAGRAM];
                 break;
             case 3:
-                // Email to support@youenjoy.ru
-                url = [NSURL URLWithString:[@"mailto:support@youenjoy.ru?subject=Казахская Клавиатура: Сообщение об ошибке" stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+                // Support email 
+                // url = [NSURL URLWithString:[@"mailto:support@youenjoy.ru?subject=Казахская Клавиатура: Сообщение об ошибке" stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+                url = [NSURL URLWithString: [SUPPORT_EMAIL stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding]];
                 break;
         }
-        [[UIApplication sharedApplication] openURL:url];
+        [[UIApplication sharedApplication] openURL: url];
     }
 }
 
