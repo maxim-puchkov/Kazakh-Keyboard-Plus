@@ -26,12 +26,13 @@
 }
 
 
+
 #pragma mark - Sharing
 
 - (IBAction)sharePressed:(id)sender {
     UIAlertController *alert =  [UIAlertController
                                  alertControllerWithTitle:@"Поделиться"
-                                 message:@"Вы можете отправить ссылку на Казахскую Клавиатуру+ друзьям!"
+                                 message:@"Ссылка на Казахскую Клавиатуру+ в App Store будет скопирована на iPhone"
                                  preferredStyle:UIAlertControllerStyleActionSheet];
     
     UIAlertAction *ok = [UIAlertAction
@@ -66,7 +67,7 @@
                                  preferredStyle:UIAlertControllerStyleActionSheet];
     
     UIAlertAction *yes = [UIAlertAction
-                         actionWithTitle:@"Да"
+                         actionWithTitle:@"Да, я хочу оставить отзыв"
                          style:UIAlertActionStyleDefault
                          handler:^(UIAlertAction *action) {
                              NSURL *url = [NSURL URLWithString:APP_STORE_REVIEWS_URL];
@@ -78,7 +79,7 @@
                          actionWithTitle:@"Нет, я хочу сообщить об ошибке"
                          style:UIAlertActionStyleDefault
                          handler:^(UIAlertAction *action) {
-                            NSURL *url = [NSURL URLWithString:[SUPPORT_EMAIL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+                            NSURL *url = [NSURL URLWithString:[REVIEW_EMAIL stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
                              [[UIApplication sharedApplication] openURL:url];
                              [alert dismissViewControllerAnimated:YES completion:nil];
                          }];
@@ -98,17 +99,26 @@
 }
 
 
-//- (IBAction)gotoReviews:(id)sender {
-//    NSURL *url = [NSURL URLWithString:APP_STORE_REVIEWS_URL];
-//    [[UIApplication sharedApplication] openURL:url];
-//}
+#pragma mark - Settings
 
 - (void)resetDefeaults {
     self.defaults = [[NSUserDefaults alloc] initWithSuiteName:APP_SUITE];
-    if ([self.defaults objectForKey:@"Sound"] == nil) {
-        [self.defaults setBool:YES forKey:@"Sound"];
-        [self.defaults setBool:NO  forKey:@"Latin"];
+    if ([self.defaults objectForKey:KEY_SOUND] == nil) {
+        [self.defaults setBool:YES forKey:KEY_SOUND];
     }
+    if ([self.defaults objectForKey:KEY_LATIN] == nil) {
+        [self.defaults setBool:NO forKey:KEY_LATIN];
+    }
+    if ([self.defaults objectForKey:KEY_AUTO] == nil) {
+        [self.defaults setBool:YES forKey:KEY_AUTO];
+    }
+    if ([self.defaults objectForKey:KEY_CAPS] == nil) {
+        [self.defaults setBool:YES forKey:KEY_CAPS];
+    }
+    if ([self.defaults objectForKey:KEY_DOT] == nil) {
+        [self.defaults setBool:YES forKey:KEY_DOT];
+    }
+
     [self.defaults synchronize];
 }
 

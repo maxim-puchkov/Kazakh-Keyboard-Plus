@@ -56,4 +56,13 @@
 #define PATH_SOUND_DELETE @"file:///System/Library/Audio/UISounds/key_press_delete.caf"
 #define PATH_SOUND_MODIFY @"file:///System/Library/Audio/UISounds/key_press_modifier.caf"
 
+
+// Settings keys
+#define KEY_SYMBOLS @"Symbols"
+#define KEY_SOUND @"Sound"
+#define KEY_LATIN @"Latin"
+#define KEY_AUTO @"AutoCapitalize"
+#define KEY_CAPS @"EnableCapslock"
+#define KEY_DOT @"DotShortcut"
+
 #endif /* Constants_h */
