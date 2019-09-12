@@ -113,7 +113,7 @@
                           ],
                       */
                       
-                      [self symbolsFormatted],
+                      [self groupSymbols],
                       
                       @[
                           // row 2
@@ -487,21 +487,21 @@
  Insert one space into textDocumentProxy.
  */
 - (void)spacePressed {
+    [self.textDocumentProxy insertText:@" "];
     [self playModifierSound];
     [self invalidateCapital];
     [self dotShortcut];
     [self autocapitalize];
     
-    [self.textDocumentProxy insertText:@" "];
     if (self.keyboard.set != 0) {
         [self showNumeric];
     }
     
-    self.holdSpace = [NSTimer scheduledTimerWithTimeInterval:1.950 target:self selector:@selector(translatePreviousToLatin) userInfo:nil repeats:NO];
-    
     if (self.deleting) {
         [self deleteReleased];
     }
+    
+    // self.holdSpace = [NSTimer scheduledTimerWithTimeInterval:1.950 target:self selector:@selector(translatePreviousToLatin) userInfo:nil repeats:NO];
 }
 
 
@@ -512,8 +512,8 @@
  Insert new line character into textDocumentProxy.
  */
 - (void)returnPressed {
-    [self playModifierSound];
     [self.textDocumentProxy insertText:@"\n"];
+    [self playModifierSound];
     if (!self.keyboard.capital) {
         self.keyboard.capital = YES;
         [self adjustCapslock];
@@ -529,8 +529,8 @@
  Delete one character from textDocumentProxy.
  */
 - (void)deleteCharacter {
-    [self playDeleteSound];
     [self.textDocumentProxy deleteBackward];
+    [self playDeleteSound];
     
     NSString *before = [self.textDocumentProxy documentContextBeforeInput];
     NSString *last = [before substringWithRange:NSMakeRange(([before length] - 1), 1)];
@@ -847,15 +847,14 @@
     self.symbols = [self.defaults arrayForKey:KEY_SYMBOLS];
 }
 
-- (NSArray<NSArray<NSString *> *> *)symbolsFormatted {
+- (NSArray<NSArray<NSString *> *> *)groupSymbols {
     const int ROW_SIZE = 10;
-    NSMutableArray<NSArray<NSString *> *> *res = [[NSMutableArray alloc] init];
-    NSArray *arr = self.symbols;
-    for (int i = 0; i < [arr count] / 2; i++) {
-        NSArray<NSString *> *group = @[arr[i], arr[i + ROW_SIZE]];
-        [res addObject:group];
+    NSMutableArray<NSArray<NSString *> *> *result = [[NSMutableArray alloc] init];
+    for (int i = 0; i < [self.symbols count] / 2; i++) {
+        NSArray<NSString *> *group = @[self.symbols[i], self.symbols[i + ROW_SIZE]];
+        [result addObject:group];
     }
-    return [res copy];
+    return [result copy];
 }
 
 - (NSString *)toLatin:(NSString *)str {
@@ -924,10 +923,10 @@
     [self.textDocumentProxy insertText:new];
 }
 
-- (void)spaceReleased {
-    [self.holdSpace invalidate];
-    self.holdSpace = nil;
-}
+//- (void)spaceReleased {
+//    [self.holdSpace invalidate];
+//    self.holdSpace = nil;
+//}
 
 
 
@@ -937,9 +936,9 @@
     if (self.deleting) {
         [self deleteReleased];
     }
-    if (self.holdSpace) {
-        [self spaceReleased];
-    }
+//    if (self.holdSpace) {
+//        [self spaceReleased];
+//    }
 }
 
 @end

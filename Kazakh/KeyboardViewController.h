@@ -15,7 +15,7 @@
 
 @property (strong, nonatomic) Keyboard *keyboard;
 @property (strong, nonatomic) NSTimer *deleting;
-@property (strong, nonatomic) NSTimer *holdSpace;
+// @property (strong, nonatomic) NSTimer *holdSpace;
 
 @property (strong, nonatomic) NSArray *keys;
 @property (strong, nonatomic) NSArray *symbols;
@@ -114,11 +114,11 @@
 
 - (void)readSettings;
 
-- (NSArray<NSArray <NSString *> *> *)symbolsFormatted;
+- (NSArray<NSArray <NSString *> *> *)groupSymbols;
 
 - (void)translatePreviousToLatin;
 
-- (void)spaceReleased;
+//- (void)spaceReleased;
 
 
 
