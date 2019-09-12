@@ -4,11 +4,10 @@
 - [x] Rename bundle display name to "Клавиатура+"
 - [ ] Light/Dark appearance (iOS 13)
 - [x] Latin translation fixes 
-- [ ] User Interface improvement
+- [x] User Interface improvement
 - [ ] Main menu redesign 
-- [ ] Change Rate button functionality 
+- [x] Change Rate button functionality 
 - [x] Rename space bar initial title 
-- [ ] Additional symbol groups
-- [ ] Reset to default 
+- [x] Reset to default 
 - [ ] Settings: auto-capitalization, enable caps lock, dot shortcut 
 - [x] Refactoring 

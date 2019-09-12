@@ -58,6 +58,7 @@
 
 
 // Settings keys
+#define KEY_DEFAULT_SYMBOLS @"DefaultSymbols"
 #define KEY_SYMBOLS @"Symbols"
 #define KEY_SOUND @"Sound"
 #define KEY_LATIN @"Latin"

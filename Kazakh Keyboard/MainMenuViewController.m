@@ -17,7 +17,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self resetDefeaults];
+    self.defaultSymbols = @[@"π", @"√", @"∞",@"≈", @"≤", @"≥", @"±", @"≠", @"©", @"™",
+                            @"π", @"√", @"∞",@"≈", @"≤", @"≥", @"±", @"≠", @"©", @"™"];
+    [self setDefaults];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -95,14 +97,24 @@
     [alert addAction:no];
     [alert addAction:cancel];
     [self presentViewController:alert animated:YES completion:nil];
-    
 }
+
 
 
 #pragma mark - Settings
 
-- (void)resetDefeaults {
+- (void)setDefaults {
     self.defaults = [[NSUserDefaults alloc] initWithSuiteName:APP_SUITE];
+    
+    // Default extra symbols
+    if ([self.defaults objectForKey:KEY_DEFAULT_SYMBOLS] == nil) {
+        [self.defaults setObject:self.defaultSymbols forKey:KEY_DEFAULT_SYMBOLS];
+    }
+    if ([self.defaults objectForKey:KEY_SYMBOLS] == nil) {
+        [self.defaults setObject:self.defaultSymbols forKey:KEY_SYMBOLS];
+    }
+    
+    // Default configurable settings
     if ([self.defaults objectForKey:KEY_SOUND] == nil) {
         [self.defaults setBool:YES forKey:KEY_SOUND];
     }

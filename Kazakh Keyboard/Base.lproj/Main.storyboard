@@ -508,7 +508,6 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                                     <connections>
                                                         <action selector="changeAutoSettings:" destination="tmT-zO-bMm" eventType="valueChanged" id="h9c-4p-0QE"/>
-                                                        <action selector="changeTranslationSettings:" destination="tmT-zO-bMm" eventType="valueChanged" id="Rct-Qz-6kP"/>
                                                     </connections>
                                                 </switch>
                                             </subviews>
@@ -533,7 +532,6 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                                     <connections>
                                                         <action selector="changeCapslockSettings:" destination="tmT-zO-bMm" eventType="valueChanged" id="isD-Ge-OmQ"/>
-                                                        <action selector="changeTranslationSettings:" destination="tmT-zO-bMm" eventType="valueChanged" id="adc-GL-vUh"/>
                                                     </connections>
                                                 </switch>
                                             </subviews>
@@ -558,7 +556,6 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                                     <connections>
                                                         <action selector="changeDotSettings:" destination="tmT-zO-bMm" eventType="valueChanged" id="Cor-AH-MzW"/>
-                                                        <action selector="changeTranslationSettings:" destination="tmT-zO-bMm" eventType="valueChanged" id="mjA-wM-kKe"/>
                                                     </connections>
                                                 </switch>
                                             </subviews>
@@ -1064,6 +1061,9 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <state key="normal" title="Сбросить все настройки"/>
+                                                    <connections>
+                                                        <action selector="resetPressed:" destination="tmT-zO-bMm" eventType="touchUpInside" id="w0F-Jl-8Ac"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>

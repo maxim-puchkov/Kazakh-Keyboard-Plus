@@ -8,7 +8,7 @@
 
 #import "SettingsTableViewController.h"
 
-const int N = 3;
+const int SECTION_COUNT = 3;
 const int SECTION_SIZE[3] = {5, 20, 1};
 
 
@@ -23,16 +23,10 @@ const int SECTION_SIZE[3] = {5, 20, 1};
     
     // Application settings
     self.defaults = [[NSUserDefaults alloc] initWithSuiteName:APP_SUITE];
+    self.defaultSymbols = [self.defaults objectForKey:KEY_DEFAULT_SYMBOLS];
     
-    // Set symbols to default if they are not saved yet
-    self.defaultSymbols = @[@"π", @"√", @"∞",@"≈", @"≤", @"≥", @"±", @"≠", @"©", @"™",
-                            @"π", @"√", @"∞",@"≈", @"≤", @"≥", @"±", @"≠", @"©", @"™"];
-    // NSArray *test = @[@"✓", @"✗", @"÷",@"±", @"∩", @"∪", @"℃", @"👋", @"🇰🇿", @"👍", @"π", @"√", @"∞",@"≈", @"≤", @"≥", @"±", @"≠", @"©", @"™"];
-    [self resetDefeaults];
-    
-    // Update switches
-    [self updateSwitches];
-    [self updateSymbols];
+    // Refresh view to display saved settings
+    [self refreshAllViews];
     
     // Remove table footer
     [self setEmptyTableViewFooter];
@@ -57,11 +51,10 @@ const int SECTION_SIZE[3] = {5, 20, 1};
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return N;
+    return SECTION_COUNT;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    // return section == 0 ? 5 : 20;
     return SECTION_SIZE[section];
 }
 
@@ -114,11 +107,45 @@ const int SECTION_SIZE[3] = {5, 20, 1};
     [self.defaults synchronize];
 }
 
-- (void)resetDefeaults {
-    if ([self.defaults objectForKey:KEY_SYMBOLS] == nil) {
-        [self.defaults setObject:self.defaultSymbols forKey:KEY_SYMBOLS];
-    }
-    [self.defaults synchronize];
+
+
+#pragma mark - Settings reset
+
+- (IBAction)resetPressed:(id)sender {
+    UIAlertController *alert =  [UIAlertController
+                                 alertControllerWithTitle:@"Сбросить настройки"
+                                 message:@"Все настройки и сохраненные дополнительные символы будут сброшены. Это действие нельзя отменить."
+                                 preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    UIAlertAction *ok = [UIAlertAction
+                          actionWithTitle:@"Подтвердить"
+                          style:UIAlertActionStyleDefault
+                          handler:^(UIAlertAction *action) {
+                              [self reset];
+                              [self refreshAllViews];
+                              [alert dismissViewControllerAnimated:YES completion:nil];
+                          }];
+    
+    UIAlertAction *cancel = [UIAlertAction
+                             actionWithTitle:@"Отмена"
+                             style:UIAlertActionStyleCancel
+                             handler:^(UIAlertAction *action) {
+                                 [alert dismissViewControllerAnimated:YES completion:nil];
+                             }];
+    
+    [alert addAction:ok];
+    [alert addAction:cancel];
+    [self presentViewController:alert animated:YES completion:nil];
+}
+
+- (void)reset {
+    [self.defaults setObject:self.defaultSymbols forKey:KEY_DEFAULT_SYMBOLS];
+    [self.defaults setObject:self.defaultSymbols forKey:KEY_SYMBOLS];
+    [self.defaults setBool:YES forKey:KEY_SOUND];
+    [self.defaults setBool:NO forKey:KEY_LATIN];
+    [self.defaults setBool:YES forKey:KEY_AUTO];
+    [self.defaults setBool:YES forKey:KEY_CAPS];
+    [self.defaults setBool:YES forKey:KEY_DOT];
 }
 
 
@@ -134,10 +161,11 @@ const int SECTION_SIZE[3] = {5, 20, 1};
 }
 
 - (void)setEmptyToDefault {
+    NSArray<NSString *> *defaultSymbols = [self.defaults objectForKey:KEY_DEFAULT_SYMBOLS];
     int i = 0;
     for (UITextField *textField in self.symbols) {
         if (textField.text.length < 1) {
-            [textField setText:self.defaultSymbols[i]];
+            [textField setText:defaultSymbols[i]];
         }
         i++;
     }
@@ -153,9 +181,14 @@ const int SECTION_SIZE[3] = {5, 20, 1};
 
 
 
-#pragma mark - View updates
+#pragma mark - Views
 
-- (void)updateSwitches {
+- (void)refreshAllViews {
+    [self refreshSwitches];
+    [self refreshSymbols];
+}
+
+- (void)refreshSwitches {
     [self.soundSwitch setOn:[self.defaults boolForKey:KEY_SOUND]];
     [self.latinSwitch setOn:[self.defaults boolForKey:KEY_LATIN]];
     [self.autoSwitch setOn:[self.defaults boolForKey:KEY_AUTO]];
@@ -163,7 +196,7 @@ const int SECTION_SIZE[3] = {5, 20, 1};
     [self.dotSwitch setOn:[self.defaults boolForKey:KEY_DOT]];
 }
 
-- (void)updateSymbols {
+- (void)refreshSymbols {
     NSArray<NSString *> *savedSymbols = [self.defaults objectForKey:KEY_SYMBOLS];
     int i = 0;
     for (UITextField *textField in self.symbols) {

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Constants.h"
 
-const int N;
+const int SECTION_COUNT;
 const int SECTION_SIZE[3];
 
 
@@ -20,8 +20,8 @@ const int SECTION_SIZE[3];
 @property (weak, nonatomic) IBOutlet UISwitch *autoSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *capslockSwitch;
 @property (weak, nonatomic) IBOutlet UISwitch *dotSwitch;
-
 @property (strong, nonatomic) IBOutletCollection(UITextField) NSArray *symbols;
+
 @property (strong, nonatomic) NSArray<NSString *> *defaultSymbols;
 
 @property (strong, nonatomic) NSUserDefaults *defaults;

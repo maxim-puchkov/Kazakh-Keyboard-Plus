@@ -12,6 +12,7 @@
 
 @interface MainMenuViewController : UIViewController
 
+@property (strong, nonatomic) NSArray<NSString *> *defaultSymbols;
 @property (strong, nonatomic) NSUserDefaults *defaults;
 
 @end
