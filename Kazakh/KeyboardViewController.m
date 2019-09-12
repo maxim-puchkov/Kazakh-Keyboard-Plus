@@ -209,9 +209,9 @@
     // The app has just changed the document's contents, the document context has been updated.
     
     NSString *before = [self.textDocumentProxy documentContextBeforeInput];
-    NSString *prev = [before substringWithRange:NSMakeRange(([before length] - 1), 1)];
+    NSString *last = [before substringWithRange:NSMakeRange(([before length] - 1), 1)];
     
-    if (prev == nil) {
+    if (last == nil) {
         self.keyboard.capital = YES;
         [self adjustCapslock];
     }
@@ -267,10 +267,9 @@
  Perform actions when a key is pressed.
  */
 - (void)keyPressed:(UIButton *)sender {
-    //[self playKeyPressSound:0];
     [self playClickSound];
     NSString *currentTitle = sender.currentTitle;
-    if (self.tranlsateToLatin) {
+    if (self.enableTranslation) {
         currentTitle = [self toLatin:currentTitle];
     }
     [self.textDocumentProxy insertText:currentTitle];
@@ -321,8 +320,6 @@
  @param event Unknown parameter.
  */
 - (void)turnOnCapital:(id)sender event:(UIEvent *)event {
-    //[self click];
-    //[self playKeyPressSound:2];
     [self playModifierSound];
     if (!self.keyboard.capital && !self.keyboard.capslock) {
         self.keyboard.capital = YES;
@@ -342,7 +339,7 @@
 - (void)capslockTouchDownRepeat:(id)sender event:(UIEvent *)event {
     UITouch *touch = [[event allTouches] anyObject];
     if (touch.tapCount == 2) {
-        if (!self.keyboard.capslock) {
+        if (self.enableCapslock && !self.keyboard.capslock) {
             self.keyboard.capslock = YES;
         }
     }
@@ -415,13 +412,11 @@
  Show numeric layout on the keyboard.
  */
 - (void)showNumeric {
-    //[self click];
-    //[self playKeyPressSound:2];
     [self playModifierSound];
     if (self.keyboard.set == 0) {
         self.keyboard.set = 1;
-        [self.keyboard.setButton setTitle: ALPHA forState:UIControlStateNormal];
-        [self.keyboard.symbolsButton setTitle: SYMBOL forState:UIControlStateNormal];
+        [self.keyboard.setButton setTitle:ALPHA forState:UIControlStateNormal];
+        [self.keyboard.symbolsButton setTitle:SYMBOL forState:UIControlStateNormal];
         self.keyboard.capslockButton.hidden = YES;
         self.keyboard.deleteButton.hidden = YES;
         self.keyboard.adjustedDeleteButton.hidden = NO;
@@ -432,7 +427,7 @@
         [self showSpecialCharacters];
     } else {
         self.keyboard.set = 0;
-        [self.keyboard.setButton setTitle: NUMERIC forState:UIControlStateNormal];
+        [self.keyboard.setButton setTitle:NUMERIC forState:UIControlStateNormal];
         self.keyboard.capslockButton.hidden = NO;
         self.keyboard.symbolsButton.hidden = YES;
         self.keyboard.adjustedDeleteButton.hidden = YES;
@@ -447,15 +442,13 @@
  Show symbols layout on the keyboard.
  */
 - (void)showSymbols {
-    //[self click];
-    //[self playKeyPressSound:2];
     [self playModifierSound];
     if (self.keyboard.set == 1) {
         self.keyboard.set = 2;
-        [self.keyboard.symbolsButton setTitle: NUMERIC forState:UIControlStateNormal];
+        [self.keyboard.symbolsButton setTitle:NUMERIC forState:UIControlStateNormal];
     } else {
         self.keyboard.set = 1;
-        [self.keyboard.symbolsButton setTitle: SYMBOL forState:UIControlStateNormal];
+        [self.keyboard.symbolsButton setTitle:SYMBOL forState:UIControlStateNormal];
     }
     [self setKeyValues];
 }
@@ -464,8 +457,6 @@
  Show special characters layout on the keyboard.
  */
 - (void)showSpecialCharacters {
-    //[self click];
-    //[self playKeyPressSound:2];
     [self playModifierSound];
     for (UIButton *key in self.keyboard.keyButtons) {
         key.hidden = YES;
@@ -479,8 +470,6 @@
  Hide special characters layout from the keyboard.
  */
 - (void)hideSpecialCharacters {
-    //[self click];
-    //[self playKeyPressSound:2];
     [self playModifierSound];
     for (UIButton *key in self.keyboard.keyButtons) {
         key.hidden = NO;
@@ -523,8 +512,6 @@
  Insert new line character into textDocumentProxy.
  */
 - (void)returnPressed {
-    //[self click];
-    //[self playKeyPressSound:2];
     [self playModifierSound];
     [self.textDocumentProxy insertText:@"\n"];
     if (!self.keyboard.capital) {
@@ -542,12 +529,13 @@
  Delete one character from textDocumentProxy.
  */
 - (void)deleteCharacter {
-    NSString *before = [self.textDocumentProxy documentContextBeforeInput];
     [self playDeleteSound];
     [self.textDocumentProxy deleteBackward];
-    before = [before substringWithRange:NSMakeRange(([before length] - 1), 1)];
-
-    if (before == nil) {
+    
+    NSString *before = [self.textDocumentProxy documentContextBeforeInput];
+    NSString *last = [before substringWithRange:NSMakeRange(([before length] - 1), 1)];
+    
+    if (last == nil) {
         self.keyboard.capital = YES;
         [self adjustCapslock];
     }
@@ -558,20 +546,20 @@
  compared to -deleteCharacter().
  */
 - (void)deletePressed {
-    //[self click];
-    //[self playKeyPressSound:1];
     [self playDeleteSound];
     NSString *before = [self.textDocumentProxy documentContextBeforeInput];
-    before = [before substringWithRange:NSMakeRange(([before length] - 1), 1)];
+    NSString *last = [before substringWithRange:NSMakeRange(([before length] - 1), 1)];
+    
     for (int r = 0; r < 4; r++) {
         for (int i = 0; i < [self.keys[0][r] count]; i++) {
-            if ([before isEqual: self.keys[0][r][i][0]]) {
+            if ([last isEqual: self.keys[0][r][i][0]]) {
                 self.keyboard.capital = YES;
                 [self adjustCapslock];
             }
         }
     }
     [self deleteCharacter];
+    
     if (!self.deleting) {
         self.deleting = [NSTimer scheduledTimerWithTimeInterval:DELETE_CHARACTER_INTERVAL
                                                          target:self
@@ -695,8 +683,6 @@
 
 /**
  Change background image of a button when it is pressed.
- 
- @param sender Button that was pressed.
  */
 - (void)keyButtonPress:(id)sender {
     [sender setBackgroundImage:[UIImage imageNamed:@"button_white_key_pressed"] forState:UIControlStateApplication];
@@ -707,8 +693,6 @@
 
 /**
  Change background image of a button back to default.
- 
- @param sender Button that was released.
  */
 - (void)keyButtonRelease:(id)sender {
     UIImage *buttonAppearance;
@@ -737,7 +721,7 @@
                     break;
                 }
             }
-            if (!containsRestrictedCharacters) {
+            if (self.enableDotShortcut && !containsRestrictedCharacters) {
                 [self deleteCharacter];
                 [self.textDocumentProxy insertText:@"."];
             }
@@ -760,7 +744,7 @@
             break;
         }
     }
-    if (endsWithAllowedCharacter) {
+    if (self.enableAutoCapitalization && endsWithAllowedCharacter) {
         self.keyboard.capital = YES;
         [self adjustCapslock];
     }
@@ -774,7 +758,6 @@
 /**
  Play click sound.
  */
-
 - (void)click {
     AudioServicesPlaySystemSound(ID_ALT_SOUND_CLICK);
 }
@@ -815,7 +798,7 @@
 #pragma mark - Sound
 
 - (void)playSound:(SystemSoundID)soundID {
-    if (self.soundEnabled) {
+    if (self.enableSounds) {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
             AudioServicesPlaySystemSound(soundID);
         });
@@ -836,7 +819,7 @@
 
 
 
-#pragma mark Animation
+#pragma mark - Animation
 
 /**
  Animate space title from keyboard name to a set title.
@@ -856,13 +839,12 @@
 
 - (void)readSettings {
     self.defaults = [[NSUserDefaults alloc] initWithSuiteName:APP_SUITE];
-    [self.defaults synchronize];
-    self.soundEnabled = [self.defaults boolForKey:@"Sound"];
-    self.tranlsateToLatin = [self.defaults boolForKey:@"Latin"];
-    NSArray *arr = @[@"π", @"√", @"∞",@"≈", @"≤", @"≥", @"±", @"≠", @"©", @"™",
-                     @"π", @"√", @"∞",@"≈", @"≤", @"≥", @"±", @"≠", @"©", @"™"];
-    self.symbols = [self.defaults arrayForKey:@"Symbols"];
-    if (!self.symbols) self.symbols = arr;
+    self.enableSounds = [self.defaults boolForKey:KEY_SOUND];
+    self.enableTranslation = [self.defaults boolForKey:KEY_LATIN];
+    self.enableAutoCapitalization = [self.defaults boolForKey:KEY_AUTO];
+    self.enableCapslock = [self.defaults boolForKey:KEY_CAPS];
+    self.enableDotShortcut = [self.defaults boolForKey:KEY_DOT];
+    self.symbols = [self.defaults arrayForKey:KEY_SYMBOLS];
 }
 
 - (NSArray<NSArray<NSString *> *> *)symbolsFormatted {

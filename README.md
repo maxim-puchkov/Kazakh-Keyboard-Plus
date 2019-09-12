@@ -9,5 +9,5 @@
 - [x] Change Rate button functionality 
 - [x] Rename space bar initial title 
 - [x] Reset to default 
-- [ ] Settings: auto-capitalization, enable caps lock, dot shortcut 
+- [x] Settings: auto-capitalization, enable caps lock, dot shortcut 
 - [x] Refactoring 

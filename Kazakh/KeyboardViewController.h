@@ -14,14 +14,19 @@
 @interface KeyboardViewController : UIInputViewController
 
 @property (strong, nonatomic) Keyboard *keyboard;
-@property (strong, nonatomic) NSArray *keys;
 @property (strong, nonatomic) NSTimer *deleting;
-@property (strong, nonatomic) NSUserDefaults *defaults;
-@property (strong, nonatomic) NSArray *symbols;
 @property (strong, nonatomic) NSTimer *holdSpace;
 
-@property BOOL soundEnabled;
-@property BOOL tranlsateToLatin;
+@property (strong, nonatomic) NSArray *keys;
+@property (strong, nonatomic) NSArray *symbols;
+
+@property (strong, nonatomic) NSUserDefaults *defaults;
+
+@property BOOL enableSounds;
+@property BOOL enableTranslation;
+@property BOOL enableAutoCapitalization;
+@property BOOL enableCapslock;
+@property BOOL enableDotShortcut;
 
 
 
