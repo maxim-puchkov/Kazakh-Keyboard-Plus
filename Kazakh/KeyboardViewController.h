@@ -31,72 +31,86 @@
 
 
 #pragma mark - Version 1.0
-
-- (void)updateViewConstraints;
+#pragma mark - View
 
 - (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
+- (void)viewWillDisappear:(BOOL)animated;
+- (void)updateViewConstraints;
 
 - (void)didReceiveMemoryWarning;
 
-- (void)viewWillAppear:(BOOL)animated;
 
-- (void)viewWillDisappear:(BOOL)animated;
+
+#pragma mark - Text editing
 
 - (void)textWillChange:(id<UITextInput>)textInput;
-
 - (void)textDidChange:(id<UITextInput>)textInput;
-
 - (void)textFieldDidBeginEditing:(UITextField *)textField;
 
-- (void)addKeyboardGestures;
 
-- (void)keyPressed:(UIButton *)sender;
 
-- (void)setKeyValues;
-
-- (void)turnOnCapital:(id)sender event:(UIEvent *)event;
-
-- (void)capslockTouchDownRepeat:(id)sender event:(UIEvent *)event;
-
-- (void)setCapslockImage;
-
-- (void)adjustCapslock;
-
-- (void)invalidateCapital;
-
-- (void)showNumeric;
-
-- (void)showSymbols;
-
-- (void)showSpecialCharacters;
-
-- (void)hideSpecialCharacters;
-
-- (void)spacePressed;
-
-- (void)returnPressed;
-
-- (void)deleteCharacter;
-
-- (void)deletePressed;
-
-- (void)deleteReleased;
-
-- (void)globePressed;
+#pragma mark - Keyboard initialization
 
 - (void)setUpKeyboardAppearance;
+- (void)addKeyboardGestures;
+- (void)setKeyValues;
 
+
+
+#pragma mark - Keyboard keys
+
+- (void)keyPressed:(UIButton *)sender;
 - (void)keyButtonPress:(id)sender;
-
 - (void)keyButtonRelease:(id)sender;
 
-- (void)dotShortcut;
 
+#pragma mark Caps lock
+- (void)setCapslockImage;
+- (void)adjustCapslock;
+- (void)capslockTouchDownRepeat:(id)sender event:(UIEvent *)event;
+
+- (void)turnOnCapital:(id)sender event:(UIEvent *)event;
+- (void)invalidateCapital;
+
+
+#pragma mark Symbols
+- (void)showNumeric;
+- (void)showSymbols;
+- (void)showSpecialCharacters;
+- (void)hideSpecialCharacters;
+
+
+#pragma mark Space
+- (void)spacePressed;
+
+
+#pragma mark Return
+- (void)returnPressed;
+
+
+#pragma mark Delete
+- (void)deleteCharacter;
+- (void)deletePressed;
+- (void)deleteReleased;
+
+
+#pragma mark Globe
+- (void)globePressed;
+
+
+
+#pragma mark - Keyboard settings
+
+- (void)dotShortcut;
 - (void)autocapitalize;
 
-- (void)__attribute__((deprecated))click; 
-
+- (void)__attribute__((deprecated))click;
 - (void)__attribute__((deprecated))playKeyPressSound:(NSInteger)type;
+
+
+
+#pragma mark - Animation
 
 - (void)changeSpaceTitle;
 

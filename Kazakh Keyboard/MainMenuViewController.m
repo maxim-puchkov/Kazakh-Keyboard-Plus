@@ -34,7 +34,7 @@
 - (IBAction)sharePressed:(id)sender {
     UIAlertController *alert =  [UIAlertController
                                  alertControllerWithTitle:@"Поделиться"
-                                 message:@"Ссылка на Казахскую Клавиатуру+ в App Store будет скопирована на iPhone"
+                                 message:[@"Поделитесь ссылкой на Казахскую Клавиатуру+ в App Store\n\n" stringByAppendingString: APP_STORE_URL]
                                  preferredStyle:UIAlertControllerStyleActionSheet];
     
     UIAlertAction *ok = [UIAlertAction

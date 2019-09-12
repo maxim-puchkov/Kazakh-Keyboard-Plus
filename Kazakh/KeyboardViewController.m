@@ -17,13 +17,7 @@
 
 
 #pragma mark - Version 1.0
-#pragma mark - View Controller Methods
-
-- (void)updateViewConstraints {
-    [super updateViewConstraints];
-    
-    // Add custom view sizing constraints here
-}
+#pragma mark - View
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -152,12 +146,6 @@
     self.keyboard.capslockButton.adjustsImageWhenHighlighted = NO;
     
     [self addKeyboardGestures];
-    
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -200,14 +188,26 @@
     [self invalidateTimers];
 }
 
+- (void)updateViewConstraints {
+    [super updateViewConstraints];
+    // Add custom view sizing constraints here
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated
+}
+
+
+
+#pragma mark - Text editing
+
 - (void)textWillChange:(id<UITextInput>)textInput {
     // The app is about to change the document's contents. Perform any preparation here.
-    
 }
 
 - (void)textDidChange:(id<UITextInput>)textInput {
     // The app has just changed the document's contents, the document context has been updated.
-    
     NSString *before = [self.textDocumentProxy documentContextBeforeInput];
     NSString *last = [before substringWithRange:NSMakeRange(([before length] - 1), 1)];
     
@@ -226,7 +226,95 @@
 
 
 
-#pragma mark - Keyboard Buttons
+#pragma mark - Keyboard initialization
+
+/**
+ Apply keyboard appearance to dark or light
+ */
+- (void)setUpKeyboardAppearance {
+    self.keyboard.darkAppearance = (self.textDocumentProxy.keyboardAppearance == UIKeyboardAppearanceDark) ? YES : NO;
+    UIColor *textColor;
+    UIColor *backgroundColor;
+    UIImage *globeImage;
+    UIImage *buttonAppearance;
+    UIImage *buttonActive;
+    UIImage *systemButtonAppearance;
+    UIImage *systemButtonActive;
+    UIImage *spaceAppearance;
+    UIImage *spaceActive;
+    UIImage *returnAppearance;
+    UIImage *returnActive;
+    UIImage *deleteAppearance;
+    
+    // 2.2
+    //NSString *color = self.keyboard.darkAppearance ? @"black" : @"white";
+    
+    if (self.keyboard.darkAppearance) {
+        textColor = [UIColor whiteColor];
+        globeImage = [UIImage imageNamed:@"globe_white"];
+        backgroundColor = [UIColor colorWithRed:0.078 green:0.078 blue:0.078 alpha:0.2];
+        buttonAppearance = [UIImage imageNamed:@"button_black_key"];
+        buttonActive = [UIImage imageNamed:@"button_black_key_pressed"];
+        systemButtonAppearance = [UIImage imageNamed:@"button_black_system"];
+        systemButtonActive = [UIImage imageNamed:@"button_black_system_pressed"];
+        spaceAppearance = [UIImage imageNamed:@"button_black_big"];
+        spaceActive = [UIImage imageNamed:@"button_white_big_pressed"];
+        returnAppearance = [UIImage imageNamed:@"button_black_system_big"];
+        returnActive = [UIImage imageNamed:@"button_black_system_big_pressed"];
+        deleteAppearance = [UIImage imageNamed:@"delete_white"];
+    } else {
+        textColor = [UIColor blackColor];
+        globeImage = [UIImage imageNamed:@"globe_black"];
+        backgroundColor = [UIColor colorWithRed:0.824 green:0.835 blue:0.859 alpha:1];
+        buttonAppearance = [UIImage imageNamed:@"button_white_key"];
+        buttonActive = [UIImage imageNamed:@"button_white_key_pressed"];
+        systemButtonAppearance = [UIImage imageNamed:@"button_white_system"];
+        systemButtonActive = [UIImage imageNamed:@"button_white_system_pressed"];
+        spaceAppearance = [UIImage imageNamed:@"button_white_big"];
+        spaceActive = [UIImage imageNamed:@"button_white_big_pressed"];
+        returnAppearance = [UIImage imageNamed:@"button_white_system_big"];
+        returnActive = [UIImage imageNamed:@"button_white_system_big_pressed"];
+        deleteAppearance = [UIImage imageNamed:@"delete_black"];
+    }
+    
+    for (UIButton *key in self.keyboard.keyButtons) {
+        [key setTitleColor:textColor forState:UIControlStateNormal];
+        [key setBackgroundImage:buttonAppearance forState:UIControlStateNormal];
+        [key setBackgroundImage:buttonActive forState:UIControlStateHighlighted];
+        [key addTarget:self action:@selector(keyButtonPress:) forControlEvents:UIControlEventTouchDown];
+    }
+    for (UIButton *key in self.keyboard.specialCharacters) {
+        [key setTitleColor:textColor forState:UIControlStateNormal];
+        [key setBackgroundImage:buttonAppearance forState:UIControlStateNormal];
+        [key setBackgroundImage:buttonActive forState:UIControlStateHighlighted];
+        [key addTarget:self action:@selector(keyButtonPress:) forControlEvents:UIControlEventTouchDown];
+    }
+    [self.keyboard.spaceButton setTitleColor:textColor forState:UIControlStateNormal];
+    [self.keyboard.spaceButton setBackgroundImage:spaceAppearance forState:UIControlStateNormal];
+    [self.keyboard.spaceButton setBackgroundImage:spaceActive forState:UIControlStateHighlighted];
+    [self.keyboard.returnButton setTitleColor:textColor forState:UIControlStateNormal];
+    [self.keyboard.returnButton setBackgroundImage:returnAppearance forState:UIControlStateNormal];
+    [self.keyboard.returnButton setBackgroundImage:returnActive forState:UIControlStateHighlighted];
+    [self.keyboard.setButton setTitleColor:textColor forState:UIControlStateNormal];
+    [self.keyboard.setButton setBackgroundImage:systemButtonAppearance forState:UIControlStateNormal];
+    [self.keyboard.setButton setBackgroundImage:systemButtonActive forState:UIControlStateHighlighted];
+    [self.keyboard.symbolsButton setTitleColor:textColor forState:UIControlStateNormal];
+    [self.keyboard.symbolsButton setBackgroundImage:systemButtonAppearance forState:UIControlStateNormal];
+    [self.keyboard.symbolsButton setBackgroundImage:systemButtonActive forState:UIControlStateHighlighted];
+    [self.keyboard.globeButton setImage:globeImage forState:UIControlStateNormal];
+    [self.keyboard.globeButton setBackgroundImage:systemButtonAppearance forState:UIControlStateNormal];
+    [self.keyboard.globeButton setBackgroundImage:systemButtonActive forState:UIControlStateHighlighted];
+    [self.keyboard.capslockButton setBackgroundImage:systemButtonAppearance forState:UIControlStateNormal];
+    [self.keyboard.capslockButton setBackgroundImage:systemButtonActive forState:UIControlStateHighlighted];
+    [self.keyboard.deleteButton setImage:deleteAppearance forState:UIControlStateNormal];
+    [self.keyboard.deleteButton setBackgroundImage:systemButtonAppearance forState:UIControlStateNormal];
+    [self.keyboard.deleteButton setBackgroundImage:systemButtonActive forState:UIControlStateHighlighted];
+    [self.keyboard.adjustedDeleteButton setImage:deleteAppearance forState:UIControlStateNormal];
+    [self.keyboard.adjustedDeleteButton setBackgroundImage:systemButtonAppearance forState:UIControlStateNormal];
+    [self.keyboard.adjustedDeleteButton setBackgroundImage:systemButtonActive forState:UIControlStateHighlighted];
+    
+    self.keyboard.backgroundColor = backgroundColor;
+}
 
 /**
  Add keyboard gesture recognizers.
@@ -263,22 +351,9 @@
     
 }
 
-/**
- Perform actions when a key is pressed.
- */
-- (void)keyPressed:(UIButton *)sender {
-    [self playClickSound];
-    NSString *currentTitle = sender.currentTitle;
-    if (self.enableTranslation) {
-        currentTitle = [self toLatin:currentTitle];
-    }
-    [self.textDocumentProxy insertText:currentTitle];
-    if ([currentTitle isEqual: @"'"] && self.keyboard.set != 0) {
-        [self showNumeric];
-    }
-    [self invalidateCapital];
-    [self invalidateTimers];
-}
+
+
+#pragma mark - Keyboard keys
 
 /**
  Set keyboard values depending on the current set of characters.
@@ -309,42 +384,49 @@
     }
 }
 
-
-
-#pragma mark Caps Lock
-
 /**
- Turn on capital letter.
-    
- @param sender Unknown parameter.
- @param event Unknown parameter.
+ Perform actions when a key is pressed.
  */
-- (void)turnOnCapital:(id)sender event:(UIEvent *)event {
-    [self playModifierSound];
-    if (!self.keyboard.capital && !self.keyboard.capslock) {
-        self.keyboard.capital = YES;
-    } else if (self.keyboard.capital || self.keyboard.capslock) {
-        self.keyboard.capital = NO;
-        self.keyboard.capslock = NO;
+- (void)keyPressed:(UIButton *)sender {
+    [self playClickSound];
+    NSString *currentTitle = sender.currentTitle;
+    if (self.enableTranslation) {
+        currentTitle = [self toLatin:currentTitle];
     }
-    [self adjustCapslock];
+    [self.textDocumentProxy insertText:currentTitle];
+    if ([currentTitle isEqual: @"'"] && self.keyboard.set != 0) {
+        [self showNumeric];
+    }
+    [self invalidateCapital];
+    [self invalidateTimers];
 }
 
 /**
- Turn on capslock when capslock button was pressed twice.
- 
- @param sender Unknown parameter.
- @param event Unknown parameter.
+ Change background image of a button when it is pressed.
  */
-- (void)capslockTouchDownRepeat:(id)sender event:(UIEvent *)event {
-    UITouch *touch = [[event allTouches] anyObject];
-    if (touch.tapCount == 2) {
-        if (self.enableCapslock && !self.keyboard.capslock) {
-            self.keyboard.capslock = YES;
-        }
-    }
-    [self adjustCapslock];
+- (void)keyButtonPress:(id)sender {
+    [sender setBackgroundImage:[UIImage imageNamed:@"button_white_key_pressed"] forState:UIControlStateApplication];
+    [sender setBackgroundImage:[UIImage imageNamed:@"button_white_key_pressed"] forState:UIControlStateFocused];
+    [sender setBackgroundImage:[UIImage imageNamed:@"button_white_key_pressed"] forState:UIControlStateHighlighted];
+    [sender setBackgroundImage:[UIImage imageNamed:@"button_white_key_pressed"] forState:UIControlStateReserved];
 }
+
+/**
+ Change background image of a button back to default.
+ */
+- (void)keyButtonRelease:(id)sender {
+    UIImage *buttonAppearance;
+    if (self.keyboard.darkAppearance) {
+        buttonAppearance = [UIImage imageNamed:@"button_black_key"];
+    } else {
+        buttonAppearance = [UIImage imageNamed:@"button_white_key"];
+    }
+    [sender setBackgroundImage:buttonAppearance forState:UIControlStateNormal];
+}
+
+
+
+#pragma mark Caps lock
 
 /**
  Set capslock image depending on its status.
@@ -395,7 +477,40 @@
 }
 
 /**
- Invalidate next capital letter.
+ Turn on capslock when capslock button was pressed twice.
+ 
+ @param sender Unknown parameter.
+ @param event Unknown parameter.
+ */
+- (void)capslockTouchDownRepeat:(id)sender event:(UIEvent *)event {
+    UITouch *touch = [[event allTouches] anyObject];
+    if (touch.tapCount == 2) {
+        if (self.enableCapslock && !self.keyboard.capslock) {
+            self.keyboard.capslock = YES;
+        }
+    }
+    [self adjustCapslock];
+}
+
+/**
+ Turn on capital letter.
+ 
+ @param sender Unknown parameter.
+ @param event Unknown parameter.
+ */
+- (void)turnOnCapital:(id)sender event:(UIEvent *)event {
+    [self playModifierSound];
+    if (!self.keyboard.capital && !self.keyboard.capslock) {
+        self.keyboard.capital = YES;
+    } else if (self.keyboard.capital || self.keyboard.capslock) {
+        self.keyboard.capital = NO;
+        self.keyboard.capslock = NO;
+    }
+    [self adjustCapslock];
+}
+
+/**
+ Invalidate capital letter.
  */
 - (void)invalidateCapital {
     if (self.keyboard.capital) {
@@ -591,118 +706,7 @@
 
 
 
-#pragma mark - Keyboard Settings
-
-/**
- Apply keyboard appearance to dark or light
- */
-- (void)setUpKeyboardAppearance {
-    self.keyboard.darkAppearance = (self.textDocumentProxy.keyboardAppearance == UIKeyboardAppearanceDark) ? YES : NO;
-    UIColor *textColor;
-    UIColor *backgroundColor;
-    UIImage *globeImage;
-    UIImage *buttonAppearance;
-    UIImage *buttonActive;
-    UIImage *systemButtonAppearance;
-    UIImage *systemButtonActive;
-    UIImage *spaceAppearance;
-    UIImage *spaceActive;
-    UIImage *returnAppearance;
-    UIImage *returnActive;
-    UIImage *deleteAppearance;
-    
-    // 2.2
-    //NSString *color = self.keyboard.darkAppearance ? @"black" : @"white";
-    
-    if (self.keyboard.darkAppearance) {
-        textColor = [UIColor whiteColor];
-        globeImage = [UIImage imageNamed:@"globe_white"];
-        backgroundColor = [UIColor colorWithRed:0.078 green:0.078 blue:0.078 alpha:0.2];
-        buttonAppearance = [UIImage imageNamed:@"button_black_key"];
-        buttonActive = [UIImage imageNamed:@"button_black_key_pressed"];
-        systemButtonAppearance = [UIImage imageNamed:@"button_black_system"];
-        systemButtonActive = [UIImage imageNamed:@"button_black_system_pressed"];
-        spaceAppearance = [UIImage imageNamed:@"button_black_big"];
-        spaceActive = [UIImage imageNamed:@"button_white_big_pressed"];
-        returnAppearance = [UIImage imageNamed:@"button_black_system_big"];
-        returnActive = [UIImage imageNamed:@"button_black_system_big_pressed"];
-        deleteAppearance = [UIImage imageNamed:@"delete_white"];
-    } else {
-        textColor = [UIColor blackColor];
-        globeImage = [UIImage imageNamed:@"globe_black"];
-        backgroundColor = [UIColor colorWithRed:0.824 green:0.835 blue:0.859 alpha:1];
-        buttonAppearance = [UIImage imageNamed:@"button_white_key"];
-        buttonActive = [UIImage imageNamed:@"button_white_key_pressed"];
-        systemButtonAppearance = [UIImage imageNamed:@"button_white_system"];
-        systemButtonActive = [UIImage imageNamed:@"button_white_system_pressed"];
-        spaceAppearance = [UIImage imageNamed:@"button_white_big"];
-        spaceActive = [UIImage imageNamed:@"button_white_big_pressed"];
-        returnAppearance = [UIImage imageNamed:@"button_white_system_big"];
-        returnActive = [UIImage imageNamed:@"button_white_system_big_pressed"];
-        deleteAppearance = [UIImage imageNamed:@"delete_black"];
-    }
-    
-    for (UIButton *key in self.keyboard.keyButtons) {
-        [key setTitleColor:textColor forState:UIControlStateNormal];
-        [key setBackgroundImage:buttonAppearance forState:UIControlStateNormal];
-        [key setBackgroundImage:buttonActive forState:UIControlStateHighlighted];
-        [key addTarget:self action:@selector(keyButtonPress:) forControlEvents:UIControlEventTouchDown];
-    }
-    for (UIButton *key in self.keyboard.specialCharacters) {
-        [key setTitleColor:textColor forState:UIControlStateNormal];
-        [key setBackgroundImage:buttonAppearance forState:UIControlStateNormal];
-        [key setBackgroundImage:buttonActive forState:UIControlStateHighlighted];
-        [key addTarget:self action:@selector(keyButtonPress:) forControlEvents:UIControlEventTouchDown];
-    }
-    [self.keyboard.spaceButton setTitleColor:textColor forState:UIControlStateNormal];
-    [self.keyboard.spaceButton setBackgroundImage:spaceAppearance forState:UIControlStateNormal];
-    [self.keyboard.spaceButton setBackgroundImage:spaceActive forState:UIControlStateHighlighted];
-    [self.keyboard.returnButton setTitleColor:textColor forState:UIControlStateNormal];
-    [self.keyboard.returnButton setBackgroundImage:returnAppearance forState:UIControlStateNormal];
-    [self.keyboard.returnButton setBackgroundImage:returnActive forState:UIControlStateHighlighted];
-    [self.keyboard.setButton setTitleColor:textColor forState:UIControlStateNormal];
-    [self.keyboard.setButton setBackgroundImage:systemButtonAppearance forState:UIControlStateNormal];
-    [self.keyboard.setButton setBackgroundImage:systemButtonActive forState:UIControlStateHighlighted];
-    [self.keyboard.symbolsButton setTitleColor:textColor forState:UIControlStateNormal];
-    [self.keyboard.symbolsButton setBackgroundImage:systemButtonAppearance forState:UIControlStateNormal];
-    [self.keyboard.symbolsButton setBackgroundImage:systemButtonActive forState:UIControlStateHighlighted];
-    [self.keyboard.globeButton setImage:globeImage forState:UIControlStateNormal];
-    [self.keyboard.globeButton setBackgroundImage:systemButtonAppearance forState:UIControlStateNormal];
-    [self.keyboard.globeButton setBackgroundImage:systemButtonActive forState:UIControlStateHighlighted];
-    [self.keyboard.capslockButton setBackgroundImage:systemButtonAppearance forState:UIControlStateNormal];
-    [self.keyboard.capslockButton setBackgroundImage:systemButtonActive forState:UIControlStateHighlighted];
-    [self.keyboard.deleteButton setImage:deleteAppearance forState:UIControlStateNormal];
-    [self.keyboard.deleteButton setBackgroundImage:systemButtonAppearance forState:UIControlStateNormal];
-    [self.keyboard.deleteButton setBackgroundImage:systemButtonActive forState:UIControlStateHighlighted];
-    [self.keyboard.adjustedDeleteButton setImage:deleteAppearance forState:UIControlStateNormal];
-    [self.keyboard.adjustedDeleteButton setBackgroundImage:systemButtonAppearance forState:UIControlStateNormal];
-    [self.keyboard.adjustedDeleteButton setBackgroundImage:systemButtonActive forState:UIControlStateHighlighted];
-    
-    self.keyboard.backgroundColor = backgroundColor;
-}
-
-/**
- Change background image of a button when it is pressed.
- */
-- (void)keyButtonPress:(id)sender {
-    [sender setBackgroundImage:[UIImage imageNamed:@"button_white_key_pressed"] forState:UIControlStateApplication];
-    [sender setBackgroundImage:[UIImage imageNamed:@"button_white_key_pressed"] forState:UIControlStateFocused];
-    [sender setBackgroundImage:[UIImage imageNamed:@"button_white_key_pressed"] forState:UIControlStateHighlighted];
-    [sender setBackgroundImage:[UIImage imageNamed:@"button_white_key_pressed"] forState:UIControlStateReserved];
-}
-
-/**
- Change background image of a button back to default.
- */
-- (void)keyButtonRelease:(id)sender {
-    UIImage *buttonAppearance;
-    if (self.keyboard.darkAppearance) {
-        buttonAppearance = [UIImage imageNamed:@"button_black_key"];
-    } else {
-        buttonAppearance = [UIImage imageNamed:@"button_white_key"];
-    }
-    [sender setBackgroundImage:buttonAppearance forState:UIControlStateNormal];
-}
+#pragma mark - Keyboard settings
 
 /**
  Add a dot when user presses Space twice if the character after which a dot 
