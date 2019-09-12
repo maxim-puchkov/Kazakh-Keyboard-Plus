@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.13"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <capability name="iOS 13.0 system colors" minToolsVersion="11.0"/>
     </dependencies>
     <scenes>
         <!--Казахская Клавиатура+-->
@@ -16,7 +17,7 @@
                         <viewControllerLayoutGuide type="bottom" id="uxO-XR-wBy"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="cpl-qZ-TBP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bRp-n8-FKX" userLabel="Install">
@@ -42,7 +43,6 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Установка" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="2wv-XL-Hnl">
                                 <rect key="frame" x="60.5" y="189.5" width="83" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aey-Vd-SHZ" userLabel="Settings">
@@ -68,11 +68,10 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Настройки" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="TmY-TC-XKd">
                                 <rect key="frame" x="229.5" y="189.5" width="87.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4SP-sP-8td" userLabel="Info">
-                                <rect key="frame" x="56" y="288" width="91.5" height="91.5"/>
+                                <rect key="frame" x="56" y="278" width="91.5" height="91.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="4SP-sP-8td" secondAttribute="height" multiplier="1:1" id="uHV-ud-ZHk"/>
                                 </constraints>
@@ -92,13 +91,12 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Дополнительно" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="Pyd-QZ-awZ">
-                                <rect key="frame" x="39" y="387.5" width="125.5" height="21"/>
+                                <rect key="frame" x="39" y="377.5" width="125.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WQf-xt-pdO" userLabel="Rate">
-                                <rect key="frame" x="227.5" y="288" width="91.5" height="91.5"/>
+                                <rect key="frame" x="227.5" y="278" width="91.5" height="91.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="WQf-xt-pdO" secondAttribute="height" multiplier="1:1" id="OG4-JS-k1x"/>
                                 </constraints>
@@ -121,13 +119,12 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Оценить" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="IUF-Tp-edD">
-                                <rect key="frame" x="239" y="387.5" width="69" height="21"/>
+                                <rect key="frame" x="239" y="377.5" width="69" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nqC-HQ-uP3" userLabel="Share">
-                                <rect key="frame" x="142" y="464" width="91.5" height="91.5"/>
+                                <rect key="frame" x="142" y="444" width="91.5" height="91.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="nqC-HQ-uP3" secondAttribute="height" multiplier="1:1" id="drh-HO-m52"/>
                                 </constraints>
@@ -147,13 +144,12 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Поделиться" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="lhT-pC-8Ih">
-                                <rect key="frame" x="140" y="563.5" width="95" height="21"/>
+                                <rect key="frame" x="140" y="543.5" width="95" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="secondarySystemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="WQf-xt-pdO" firstAttribute="centerY" secondItem="cpl-qZ-TBP" secondAttribute="centerY" id="1Ip-ZR-Y6b"/>
                             <constraint firstItem="Pyd-QZ-awZ" firstAttribute="leading" secondItem="cpl-qZ-TBP" secondAttribute="leadingMargin" constant="55" id="3PK-sr-Tgj"/>
@@ -219,6 +215,9 @@
                                 <exclude reference="lhT-pC-8Ih"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Lys-jY-PFL"/>
+                                <exclude reference="hMv-6t-BGu"/>
+                                <exclude reference="he0-HT-6Hn"/>
                                 <exclude reference="7G0-AE-4Jr"/>
                                 <exclude reference="Ee2-AL-nQc"/>
                                 <exclude reference="GvC-25-aOk"/>
@@ -238,24 +237,24 @@
                                 <exclude reference="vll-gu-Ny7"/>
                                 <exclude reference="xAC-qT-tpk"/>
                                 <exclude reference="xTL-mX-Y4v"/>
+                                <exclude reference="C5i-Hx-F6E"/>
+                                <exclude reference="inh-B7-1AI"/>
                                 <exclude reference="7Wk-VE-pFH"/>
                                 <exclude reference="Alv-9r-tzA"/>
                                 <exclude reference="Op6-Bq-76c"/>
                                 <exclude reference="XUj-GB-fPN"/>
-                                <exclude reference="C5i-Hx-F6E"/>
-                                <exclude reference="inh-B7-1AI"/>
-                                <exclude reference="1Ip-ZR-Y6b"/>
-                                <exclude reference="EPe-PN-jDd"/>
-                                <exclude reference="IK9-fy-byr"/>
-                                <exclude reference="Jfz-6o-8xV"/>
-                                <exclude reference="tOG-hx-8c3"/>
-                                <exclude reference="vwv-hs-NyX"/>
                                 <exclude reference="3PK-sr-Tgj"/>
                                 <exclude reference="7kj-aR-Ung"/>
                                 <exclude reference="9ek-Ba-qp4"/>
                                 <exclude reference="MdI-Kd-LEI"/>
                                 <exclude reference="gDO-7p-FhG"/>
                                 <exclude reference="ux7-sF-bwd"/>
+                                <exclude reference="1Ip-ZR-Y6b"/>
+                                <exclude reference="EPe-PN-jDd"/>
+                                <exclude reference="IK9-fy-byr"/>
+                                <exclude reference="Jfz-6o-8xV"/>
+                                <exclude reference="tOG-hx-8c3"/>
+                                <exclude reference="vwv-hs-NyX"/>
                                 <exclude reference="Ajf-XL-POf"/>
                                 <exclude reference="fPo-8i-QMQ"/>
                                 <exclude reference="txo-Ea-Nwh"/>
@@ -263,9 +262,6 @@
                                 <exclude reference="fla-f1-iKR"/>
                                 <exclude reference="ntD-fs-Wu4"/>
                                 <exclude reference="kO9-wk-pOt"/>
-                                <exclude reference="Lys-jY-PFL"/>
-                                <exclude reference="hMv-6t-BGu"/>
-                                <exclude reference="he0-HT-6Hn"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -282,6 +278,9 @@
                                 <include reference="lhT-pC-8Ih"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Lys-jY-PFL"/>
+                                <exclude reference="hMv-6t-BGu"/>
+                                <exclude reference="he0-HT-6Hn"/>
                                 <exclude reference="7G0-AE-4Jr"/>
                                 <exclude reference="Ee2-AL-nQc"/>
                                 <include reference="GvC-25-aOk"/>
@@ -301,24 +300,24 @@
                                 <include reference="vll-gu-Ny7"/>
                                 <include reference="xAC-qT-tpk"/>
                                 <include reference="xTL-mX-Y4v"/>
+                                <include reference="C5i-Hx-F6E"/>
+                                <include reference="inh-B7-1AI"/>
                                 <include reference="7Wk-VE-pFH"/>
                                 <include reference="Alv-9r-tzA"/>
                                 <include reference="Op6-Bq-76c"/>
                                 <include reference="XUj-GB-fPN"/>
-                                <include reference="C5i-Hx-F6E"/>
-                                <include reference="inh-B7-1AI"/>
-                                <include reference="1Ip-ZR-Y6b"/>
-                                <include reference="EPe-PN-jDd"/>
-                                <include reference="IK9-fy-byr"/>
-                                <include reference="Jfz-6o-8xV"/>
-                                <include reference="tOG-hx-8c3"/>
-                                <include reference="vwv-hs-NyX"/>
                                 <exclude reference="3PK-sr-Tgj"/>
                                 <exclude reference="7kj-aR-Ung"/>
                                 <include reference="9ek-Ba-qp4"/>
                                 <exclude reference="MdI-Kd-LEI"/>
                                 <include reference="gDO-7p-FhG"/>
                                 <exclude reference="ux7-sF-bwd"/>
+                                <include reference="1Ip-ZR-Y6b"/>
+                                <include reference="EPe-PN-jDd"/>
+                                <include reference="IK9-fy-byr"/>
+                                <include reference="Jfz-6o-8xV"/>
+                                <include reference="tOG-hx-8c3"/>
+                                <include reference="vwv-hs-NyX"/>
                                 <include reference="Ajf-XL-POf"/>
                                 <include reference="fPo-8i-QMQ"/>
                                 <exclude reference="txo-Ea-Nwh"/>
@@ -326,9 +325,6 @@
                                 <include reference="fla-f1-iKR"/>
                                 <include reference="ntD-fs-Wu4"/>
                                 <include reference="kO9-wk-pOt"/>
-                                <exclude reference="Lys-jY-PFL"/>
-                                <exclude reference="hMv-6t-BGu"/>
-                                <exclude reference="he0-HT-6Hn"/>
                             </mask>
                         </variation>
                     </view>
@@ -339,27 +335,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fy7-1m-5Rg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1173.5999999999999" y="538.38080959520244"/>
-        </scene>
-        <!--Настройки-->
-        <scene sceneID="3ZO-c2-nfp">
-            <objects>
-                <viewController id="Mej-xX-BLi" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Fbu-HJ-htS"/>
-                        <viewControllerLayoutGuide type="bottom" id="CWf-BO-ILn"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="351-I9-bou">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Настройки" id="jad-OU-JuA">
-                        <barButtonItem key="backBarButtonItem" title="Меню" id="FsJ-pl-62N"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Sc1-QL-T44" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1174" y="1576"/>
         </scene>
         <!--Настройки-->
         <scene sceneID="gUm-at-B1Y">
@@ -2548,6 +2523,6 @@
         <image name="vk" width="100" height="100"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XmI-4a-r09"/>
+        <segue reference="aIP-wj-oEY"/>
     </inferredMetricsTieBreakers>
 </document>
