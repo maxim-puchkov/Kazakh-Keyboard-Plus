@@ -6,11 +6,10 @@ This app is no longer in App Store because Apple provides built-in Kazakh keyboa
 
 ## Images
 _See other images in 'assets' directory._  
-* App Icon:
-![Kazakh Keyboard Plus App Icon](https://github.com/maxim-puchkov/Kazakh-Keyboard-Plus/blob/master/assets/appicon/icon1024.png)
 * Preview: 
 ![Preview](https://github.com/maxim-puchkov/Kazakh-Keyboard-Plus/blob/master/assets/app%20screenshots/5.5%20retina/app_screenshot_1.png)
-
+* App Icon:
+![Kazakh Keyboard Plus App Icon](https://github.com/maxim-puchkov/Kazakh-Keyboard-Plus/blob/master/assets/appicon/icon1024.png)
 
 ## Update 3.0
 - [ ] Rename bundle display name to "Клавиатура+"
