@@ -1,7 +1,7 @@
 #  Kazakh Keyboard Plus
 Kazakh Keyboard Plus is a custom Kazakh keyboard for iPhone that reached the Top Charts of Kazakh App Store many times. It provides the same functionality as a standard Russian keyboard, as well as an additional row of Kazakh letters. Moreover, the user can customize symbolic keyboard to use any other symbol or emoji. 
 
-This app is no longer in App Store because Apple provides built-in Kazakh keyboard with newer versions of iPhoneOS.
+> __Note:__ This app is no longer in App Store because Apple provides built-in Kazakh keyboard with newer versions of iPhoneOS.
 
 
 ## Images
