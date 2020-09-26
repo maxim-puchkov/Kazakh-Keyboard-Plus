@@ -1,7 +1,7 @@
 #  Kazakh Keyboard Plus
-Kazakh Keyboard Plus is a custom Kazakh keyboard for iPhone that reached the Top Charts of Kazakh App Store many times. It provides the same functionality as a standard Russian keyboard, as well as an additional row of Kazakh letters. Moreover, the user can customize symbolic keyboard to use any other symbol or emoji. 
+Kazakh Keyboard Plus is a custom Kazakh keyboard for iPhone that many times reached the No. 1 position in the Kazakh App Store. It provides the same functionality as a standard Russian iPhone keyboard, as well as an additional row of Kazakh letters. Moreover, the user can customize symbolic keyboard to use any other symbol or emoji. 
 
-> __Note:__ This app is no longer in App Store because Apple provides built-in Kazakh keyboard with newer versions of iPhoneOS.
+> __Note:__ This app is no longer in App Store because a built-in Kazakh keyboard is added in iOS 13. ([Check out my recent projects.](https://github.com/maxim-puchkov))
 
 
 ## Images
@@ -11,18 +11,18 @@ _See other images in 'assets' directory._
 * App Icon:
 ![Kazakh Keyboard Plus App Icon](https://github.com/maxim-puchkov/Kazakh-Keyboard-Plus/blob/master/assets/appicon/icon1024.png)
 
-## Update 3.0
-- [ ] Rename bundle display name to "Клавиатура+"
-- [ ] Light/Dark appearance (iOS 13)
-- [ ] Latin translation fixes 
-- [ ] User Interface improvement
-- [ ] Main menu redesign 
-- [ ] Change Rate button functionality 
-- [ ] Rename space bar initial title 
-- [ ] Additional symbol groups
-- [ ] Reset to default 
-- [ ] Settings: auto-capitalization, enable caps lock, dot shortcut 
-- [ ] Refactoring 
+## Changelog
+- Rename bundle display name to "Клавиатура+"
+- Light/Dark appearance (iOS 13)
+- Latin translation fixes 
+- User Interface improvement
+- Main menu redesign 
+- Change Rate button functionality 
+- Rename space bar initial title 
+- Additional symbol groups
+- Reset to default 
+- Settings: auto-capitalization, enable caps lock, dot shortcut 
+- Refactoring 
 
 
 _com.maximpuchkov.Kazakh-Keyboard_
